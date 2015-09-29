@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px"
+	 height="512px" viewBox="0 0 4000 4000" style="enable-background:new 0 0 4000 4000" xml:space="preserve">
+<style>
+  .mycircle {
+    stroke: #ffffff;
+    stroke-width: 50;
+    stroke-miterlimit: 10;
+    fill: none;
+    pointer-events: all;
+  }
+  /*.mycircle:hover {
+    fill: #F0E6E6;
+    stroke: #A37958;
+    stroke-width: 50;
+    stroke-miterlimit: 10;
+  }*/
+</style>
+<g id="circle">
+	<circle class="mycircle" cx="2000" cy="2000" r="1500"/>
+</g>
+<g id="cup">
+	<path style="fill:#ffffff;" d="M1160.697,2162.718l1676.26-0.854c0,0,80.634,665.922-476.384,954.841
+		S1120.193,2894.237,1160.697,2162.718z"/>
+	
+		<ellipse style="fill:none;stroke:#ffffff;stroke-width:64;stroke-miterlimit:10;" cx="2816" cy="2478" rx="300" ry="300"/>
+</g>
+<g id="rain">
+	<path style="fill:none;stroke:#ffffff;stroke-miterlimit:10;" d="M2620.76,1926.07"/>
+	
+		<line style="fill:none;stroke:#ffffff;stroke-width:60;stroke-miterlimit:10;" x1="1455" y1="1964" x2="1595" y2="2122"/>
+
+		<line style="fill:none;stroke:#ffffff;stroke-width:60;stroke-miterlimit:10;" x1="1930" y1="1964" x2="2070" y2="2122"/>
+	
+		<line style="fill:none;stroke:#ffffff;stroke-width:60;stroke-miterlimit:10;" x1="2397" y1="1964" x2="2537" y2="2122"/>
+</g>
+<g id="cloud">
+	<ellipse style="fill:#ffffff;" cx="1525" cy="1540" rx="360" ry="360"/>
+	<ellipse style="fill:#ffffff;" cx="2483" cy="1540" rx="360" ry="360"/>
+	<ellipse style="fill:#ffffff;" cx="2000" cy="1540" rx="360" ry="360"/>
+	<ellipse style="fill:#ffffff;" cx="1764" cy="1100" rx="360" ry="360"/>
+	<ellipse style="fill:#ffffff;" cx="2237" cy="1100" rx="360" ry="360"/>
+</g>
+</svg>
