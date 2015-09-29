@@ -193,7 +193,6 @@ function dip_list_categories() {
 
     $term_list = '<ul>';
     foreach ($terms as $term) {
-      //$term_list .= '<li><a href="?cat='.$term->term_id.'" class="blog-link">'.$term->name.'</a></li>';
       $term_list .= '<li><a href="'.home_url().'/category/'.$term->name.'" class="blog-link">'.$term->name.' ('.$term->count.')</a></li>';
     }
     $term_list.= '</ul>';
@@ -211,7 +210,6 @@ function dip_list_posts() {
       $title = mb_substr( $post->post_title, 0, 22 ).'...';
      }
      $post_list .= '<li><a href="'.$post->guid.'" class="blog-link">'.$title.'</a></li>';
-     //$post_list .= '<li><a href="'.$post->guid.'" class="blog-link">'.$post->post_title.'</a></li>';
   }
   $post_list .= '</ul>';
   wp_reset_postdata();
@@ -237,7 +235,6 @@ function dip_reading_time($myContent) {
 
 // Add Actions
 add_action('init', 'dip_header_scripts'); // Add Custom Scripts to wp_head
-add_action('init', 'get_picturefill');
 add_action('wp_enqueue_scripts', 'dip_styles'); // Add Theme Stylesheet
 add_action('init', 'register_dip_menu'); // Add HTML5 Blank Menu
 add_action('init', 'dip_wp_pagination'); // Add our HTML5 Pagination
