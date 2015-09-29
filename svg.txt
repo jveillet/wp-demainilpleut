@@ -1,4 +1,0 @@
-ns = {'svg': 'http://www.w3.org/2000/svg'};
-tests['svg'] = function() {
-  return !!document.createElementNS && !!document.createElementNS(ns.svg, 'svg').createSVGRect;
-};
