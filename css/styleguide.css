@@ -1,0 +1,52 @@
+/*   
+File Name: patterns.css
+Description: Custom pattern library UX
+Author: Jérémie Veillet
+Author URI: http://www.demainilpleut.fr
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 2.0.0
+*/
+
+.patterns {
+  background-color: #fff;
+  padding: 1em;
+}
+
+.patternItem {
+  border-bottom: 1px solid #181818;
+  padding-bottom: 1em;
+}
+
+.patternItemTitle {
+  color: #0a0000;
+}
+
+.patternItemNav {
+  background-color: #424242;
+}
+
+.patternItemColor {
+  color: #000;
+  font-size: 12pt;
+  padding: 20px;
+}
+
+.patternItemColorWhite {
+  color: #fff;
+}
+
+.patternItemForm:first-child {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.patternItemForm {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.patternItemForm:last-child {
+  margin-top: 1em;
+  margin-bottom: 0;
+}

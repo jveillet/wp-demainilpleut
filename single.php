@@ -13,12 +13,12 @@
           <h2 class="coffee"><?php the_title(); ?></h2>
 		  
           <span class="blogPost-author"><a class="blog-link" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
-          <span class="blogPost-pubDate">&mdash;&nbsp;<time datetime=""><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></time></span>
+          <span class="blogPost-pubDate">&mdash;&nbsp;<time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?> at <?php the_time('G:i'); ?></time></span>
           <div class="blogPost-summary">
             <span class="blogPost-readingTime"><?php echo dip_reading_time(get_the_content()); ?> read</span>
           </div>
 		  <?php the_content(); ?>
-		  <span class="blogPost-categories">Published in <?php the_category(', '); ?>
+		  <span class="blogPost-categories">Published in <?php the_category(', '); ?></span>
 
 		</article><!-- end of article -->
 

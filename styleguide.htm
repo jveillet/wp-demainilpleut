@@ -13,7 +13,7 @@
     <link rel="dns-prefetch" href="//www.google-analytics.com">
 
     <link rel="stylesheet" href="css/styleguide.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/prism.css">
 	  <script src="js/jquery-1.11.1.min.js"></script>
 	  <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
@@ -25,27 +25,27 @@
         <h1 class="patternItemTitle">Colors</h1>
         <ul>
           <li>
-            <p class="patternItemColor blackBackground">
+            <p class="patternItemColor bg-black">
               <span class="patternItemColorWhite"><strong>Black:</strong> #0a0000</span>
             </p>
           </li>
           <li>
-            <p class="patternItemColor coffeeBackground">
+            <p class="patternItemColor bg-coffee">
               <span class="patternItemColorWhite"><strong>Coffee:</strong> #a37958</span>
             </p>
           </li>
           <li>
-            <p class="patternItemColor latteBackground">
+            <p class="patternItemColor bg-latte">
               <span class="patternItemColorWhite"><strong>Latte:</strong> #d6ac8b</span>
             </p>
           </li>
           <li>
-            <p class="patternItemColor spoonBackground">
+            <p class="patternItemColor bg-spoon">
               <span class="patternItemColorWhite"><strong>Spoon:</strong> #706666</span>
             </p>
           </li>
           <li>
-            <p class="patternItemColor sugarBackground">
+            <p class="patternItemColor bg-sugar">
               <span><strong>Sugar:</strong> #f0e6e6</span>
             </p>
           </li>
@@ -85,30 +85,31 @@
 	  <!--Pattern HTML-->
 		<div class="patternItem">
       <h1 class="patternItemTitle">TopBar</h1>
-	    <div id="topBar" class="topBar">
-		    <div class="topBarLogo"><a href="/" class="topBarLogoUrl">demainilpleut.fr</a></div>
-		    <div class="topBarMenu">
-	        <!--<a href="#menu" class="topBarMenuLink">Menu</a>-->
-          <button class="topBarMenuBtn topBarMenuBtnSmall">Menu</button>
-	        <nav id="menu" role="navigation" class="topBarNavigation">
-	  	      <ul>
-	  	        <li><a href="#">Home</a></li>
-	  		      <li><a href="#">About</a></li>
-	  		      <li><a href="#">Archive</a></li>
-	  		      <li><a href="#">Contact</a></li>
-	  	      </ul>
-	  	    </nav><!-- end of topBarNavigation -->
-	      </div><!-- end of topBarMenu -->
+      <div id="topBar" class="topBar bg-cafe">
+        <div class="topBar-logo">
+           <a href="<?php echo home_url(); ?>" class="topBar-logo-url">demainilpleut.fr</a>
+        </div><!-- end of topBar logo -->
+        <div class="topBar-menu">
+          <button class="topBar-menuBtn topBar-menuBtn--small">Menu</button>
+          <nav id="js-menu" role="navigation" class="topBar-navigation">
+            <ul>
+              <li><a href="#" class="topBar-navigation-item">Home</a></li>
+              <li><a href="#" class="topBar-navigation-item">About</a></li>
+              <li><a href="#" class="topBar-navigation-item">Archives</a></li>
+              <li><a href="#" class="topBar-navigation-item">Contact</a></li>
+            </ul>
+          </nav><!-- end of topBarNavigation -->
+        </div><!-- end of topBarMenu -->
       </div><!-- end of topBar -->
 	  </div><!-- end of pattern item -->
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Blog post summary</h1>
-        <article class="blogPost">
-          <h2><a href="#" class="blogPostTitle">Lorem ipsum dolor sit amet.</a></h2>
-          <span class="blogPostAuthor"><a class="blogLink" href="#">Jérémie Veillet</a></span>
-          <span class="blogPostPubDate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-          <div class="blogPostSummary"></div>
+        <article id="post-1" class="blogPost">
+          <h2><a href="#" title="Lorem ipsum dolor sit amet." class="blogPost-title">Lorem ipsum dolor sit amet.</a></h2>
+          <span class="blogPost-author"><a class="blog-link" href="#">Jérémie Veillet</a></span>
+          <span class="blogPost-pubDate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
+          <div class="blogPost-summary"></div>
           <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu...</p>
           <p><a href="#" class="blogLink">Read more &#8594;</a></p>
         </article><!-- end of article -->
@@ -116,32 +117,31 @@
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Blog post</h1>
-        <article class="blogPost">
-          <h1><a href="#" class="blogPostTitle">Lorem ipsum dolor sit amet.</a></h1>
-          <span class="blogPostAuthor"><a class="blogLink" href="#">Jérémie Veillet</a></span>
-          <span class="blogPostPubDate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-          <div class="blogPostSummary">
-            <!--<span class="blogPostCategories"><a href="#" class="blogLink">Coding</a>, <a href="#" class="blogLink">Windev</a></span>-->
-             <!--<span class="blogPostCategories">Published in <a href="#" class="blogLink">Coding</a>, <a href="#" class="blogLink">Windev</a></span>-->
-            <span class="blogPostReadingtime">15 min read</span>
+
+        <!-- article -->
+        <article id="post-1"class="blogPost">
+          <h2 class="coffee">Lorem ipsum dolor sit amet.</h2>
+          <span class="blogPost-author"><a class="blog-link" href="#">Jérémie Veillet</a></span>
+          <span class="blogPost-pubDate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
+          <div class="blogPost-summary">
+            <span class="blogPost-readingTime">15 min read</span>
           </div>
           <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.</p>
 <p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 <p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.</p>
-<span class="blogPostCategories">Published in <a href="#" class="blogLink">Coding</a>, <a href="#" class="blogLink">Windev</a></span>
-          <!--<p><small><em>Tags: </em></small><span class="tag"><a href="#">tag1</a></span><span class="tag"><a href="#">tag2</a></span><span class="tag"><a href="#">tag3</a></span></p>--><!-- end of tags -->
+          <span class="blogPost-categories">Published in <a href="#" rel="tag">Uncategorized</a></span>
         </article><!-- end of article -->
       </div><!-- end of pattern item -->
 
       <div class="patternItem">
         <h1 class="patternItemTitle">About</h1>
         <div class="about">
-          <h2 class-"aboutTitle">About the Author</h2>
-          <div class="aboutAuthor">
-            <a class="aboutAuthorAvatar" href="#"><img src="img/jveillet.png"g alt="author: jeremie"></a>
-			<a class="aboutAuthorName" href="#">Jérémie Veillet</a>
-            <div class="authorBio">
-              <p>I am not a hacker, not a designer, nor a web developer. I am a french software developer, who works on Windows Apps @ <a href="//www.groupefbo.com" class="blogLink">Groupe FBO</a>, and I love art in every shape and form. I live in La Roche Sur Yon, France, with my wonderfull girlfriend, and my little boy, where I wrote for <a href="//www.demainilpleut.fr/contact" class="blogLink">demainilpleut.fr</a>, and share some good times my my awesome friends and family.</p>
+          <h2 class="about-title">About the Author</h2>
+          <div class="about-author">
+            <a class="about-author-avatar" href="#"><img src="https://pbs.twimg.com/profile_images/1846430550/tetocarre__1_.jpg" width="80" height="80" alt="author"></a>
+            <a class="about-author-name" href="#">Jérémie Veillet</a>
+            <div class="about-author-bio">
+              <p>I am not a hacker, not a designer, nor a web developer. I am a french software developer, who works @ <a href="//www.accenture.com" class="blogLink">Accenture</a>, and I love art in every shape and form. I live in Nantes, France, with my wonderfull girlfriend, and my little boy, where I wrote for <a href="//demainilpleut.fr/contact" class="blogLink">demainilpleut.fr</a>, and share some good times my my awesome friends and family.</p>
             </div><!-- end of author bio -->
           </div><!-- end of about author -->
         </div><!-- end of about section -->
@@ -149,80 +149,34 @@
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Logo</h1>
-        <div  class="ia-figure ia-figure-left">
+        <object type="image/svg+xml" data="img/demainilpleut-logo.svg" width="256" height="256">
           <img src="img/demainilpleut-logo@2x.png" alt="logo">
-        </div><!-- end of figure -->
+        </object>
       </div><!-- end of pattern item -->
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Search</h1>
-          <form action="#" method="post" class="searchForm">
-            <label class="searchLabelIsVisible">Search the site</label>
-            <input type="search" placeholder="Search articles, tags, categories ..." />
-            <input type="submit" class="searchFormSubmit" value="Search">
-          </form><!-- end of form -->
+        <!-- search form -->
+        <form action="#" method="get" class="searchForm" role="search">
+          <label class="searchForm-label--isVisible">Search the blog</label>
+          <input type="search" class="searchForm-input" name="s" placeholder="Search the blog..." />
+          <input type="submit" class="searchForm-submit" role="button" value="Search">
+        </form><!-- end of search form -->
       </div><!-- end of pattern item -->
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Figures</h1>
-        <div class="ia-figure">
-          <img src="//demainilpleut.fr/styleguide/img/dummy-1136.png" alt="image retina">
-          <div class="ia-caption"><h4>Fig. 1 &mdash; Donec nec leo fringilla, pulvinar eros sit amet.</h4></div>
-        </div><!-- end of figure -->
+        <p>To be added later..</p>
       </div><!-- end of pattern item -->
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Code</h1>
-        <pre><code class="language-windev">FUNCTION TextWidthCalculate(LOCAL sControlName is string, LOCAL polControlFont is font, LOCAL sText is string):real
-
-IF NOT ControlExist(sControlName) THEN RESULT 0
-
-{sControlName, indControl}..font = polControlFont
-
-RESULT TextWidth(sControlName, sText, tMonoline)</code></pre>
+        <pre class="">
+          <code class="language-javascript">
+          var foo = "bar", baz = 5;
+          </code>
+        </pre>
       </div><!-- end of pattern item -->
-
-<!--      <div class="patternItem">
-        <h1 class="patternItemTitle">Table</h1>
-		<table class="tbl tblStripped">
-		  <thead>
-            <tr>
-			        <th>Table Heading 1</th>
-              <th>Table Heading 2</th>
-              <th>Table Heading 3</th>
-              <th>Table Heading 4</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th>Table Footer 1</th>
-              <th>Table Footer 2</th>
-              <th>Table Footer 3</th>
-              <th>Table Footer 4</th>
-            </tr>
-          </tfoot>
-            <tbody>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-     <a href="index.html" id="" title="index">index</a>           <td>Table Cell 4</td>
-              </tr>
-            </tbody>
-          </table>--><!-- end of data table -->
-      <!--</div>--><!-- end of pattern item -->
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Text fields</h1>
@@ -248,63 +202,68 @@ RESULT TextWidth(sControlName, sText, tMonoline)</code></pre>
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Pagination</h1>
-        <ol class="pagination">
-          <li class="paginationItem paginationItemCurrent">1</li>
-          <li class="paginationItem"><a href="#">2</a></li>
-          <li class="paginationItem"><a href="#">3</a></li>
-          <li class="paginationItem"><a href="#">4</a></li>
-          <li class="paginationItem"><a href="#">5</a></li>
-          <li class="paginationItem"><a href="#">6</a></li>
-          <li class="paginationItem"><a href="#">7</a></li>
-					<li class="paginationItem"><a href="#">8</a></li>
-        </ol><!-- end of pagination -->
+        <!-- pagination -->
+        <div class="pagination">
+          <ul class="page-numbers">
+            <li><span class="page-numbers current">1</span></li>
+            <li><a class="page-numbers" href="#">2</a></li>
+            <li><a class="page-numbers" href="#">3</a></li>
+            <li><a class="page-numbers" href="#">4</a></li>
+            <li><a class="page-numbers" href="#">5</a></li>
+            <li><a class="page-numbers" href="#">6</a></li>
+            <li><a class="page-numbers" href="#">7</a></li>
+            <li><a class="next page-numbers" href="#">Next »</a></li>
+          </ul>
+        </div><!-- end of pagination -->
       </div><!-- end of pattern item -->
 
       <div class="patternItem">
         <h1 class="patternItemTitle">Footer</h1>
-        <div class="footer sugarBackground">
-	        <div class="grid-container">
-	          <div class="row clearfix">
-              <div class="column third">
-                <h3>Other posts</h3>
+      <!-- footer -->
+      <div class="footer bg-cream">
+        <div class="grid-container">
+          <div class="row clearfix">
+            <div class="column third">
+              <h3 class="coffee">Other posts</h3>
                 <ul>
-                  <li><a href="#" class="blogLink">Morbi mattis nulla non augue fermentum placerat.</a></li>
-                  <li><a href="#" class="blogLink">Etiam leo risus, feugiat sit amet dignissim id</a></li>
-                  <li><a href="#" class="blogLink">Fusce euismod metus sed purus dignissim.</a></li>
-                  <li><a href="#" class="blogLink">Quisque interdum hendrerit pharetra.</a></li>
-                  <li><a href="#" class="blogLink">Quisque nec viverra dui.</a></li>
-                  <li><a href="#" class="blogLink">More posts &#8594;</a></li>
+                  <li><a href="#" class="blog-link">Your cells react to ba...</a></li>
+                  <li><a href="#" class="blog-link">Hello world!</a></li>
+                  <li><a href="#" class="blog-link">You think water moves ...</a></li>
+                  <li><a href="#" class="blog-link">That show's called a p...</a></li>
+                  <li><a href="#" class="blog-link">Your bones don't break</a></li>
+                  <li><a href="#" class="blog-link">My money's in that off...</a></li>
+                  <li><a href="#" class="blog-link">Now that we know who y...</a></li>
+                </ul>
+            </div><!-- end of column -->
+              <div class="column third">
+                <h3 class="coffee">Menu</h3>
+                <ul>
+                  <li><a href="#" class="blog-link">Blog</a></li>
+                  <li><a href="#" class="blog-link">Archives</a></li>
+                  <li><a href="#" class="blog-link">About</a></li>
+                  <li><a href="#" class="blog-link">Contact</a></li>
                 </ul>
               </div><!-- end of column -->
               <div class="column third">
-                <h3>Menu</h3>
-                <ul>
-	                <li><a href="#" class="blogLink">Blog</a></li>
-	                <li><a href="#" class="blogLink">Archives</a></li>
-	                <li><a href="#" class="blogLink">About</a></li>
-	                <li><a href="#" class="blogLink">Contact</a></li>
-                </ul>
-              </div><!-- end of column -->
-              <div class="column third">
-                <h3>Categories</h3>
-                <ul>
-	                <li><a href="#" class="blogLink">Morbi</a></li>
-	                <li><a href="#" class="blogLink">Etiam</a></li>
-	                <li><a href="#" class="blogLink">Fusce</a></li>
-	                <li><a href="#" class="blogLink">Quisque</a></li>
-	                <li><a href="#" class="blogLink">Viverra dui.</a></li>
-	                <li><a href="#" class="blogLink">More categories &#8594;</a></li>
-                </ul>
-              </div><!-- end of column -->
+                <h3 class="coffee">Categories</h3>
+                 <ul>
+                   <li><a href="#" class="blog-link">Uncategorized (7)</a></li>
+                   <li><a href="#" class="blog-link">Uncategorized (2)</a></li>
+                   <li><a href="#" class="blog-link">Uncategorized (4)</a></li>
+                 </ul> 
+               </div><!-- end of column -->
             </div><!-- end of row -->
-	        </div><!-- end of grid-container -->
+          </div><!-- end of grid-container -->
+          <div class="footer-disclaimer">
+            &copy; demainilpleut.fr 2015 - All this site's content under a <a rel="license" class="blog-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+          </div>
         </div><!-- end of footer -->
       </div><!-- end of pattern item -->
 
     </div><!-- end of pattern library -->
  
-  <script src="js/prism.min.js" async></script>
-	<script src="js/prism-wd.js" async></script>
+  <script src="js/prism.min.js"></script>
+
   <script>
   $(document).ready(function() {
     $('body').addClass('js');
@@ -318,16 +277,6 @@ RESULT TextWidth(sControlName, sText, tMonoline)</code></pre>
     });
 	});
   </script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-50889884-1', 'demainilpleut.fr');
-	  ga('send', 'pageview');
-
-	</script>
 
   </body><!-- end of body -->
 </html><!-- end of document -->

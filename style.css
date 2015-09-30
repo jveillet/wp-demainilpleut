@@ -1,16 +1,19 @@
-@charset "UTF-8";
-
 /*
-Theme Name: demainilpleut.fr
-Theme URI: https://demainilpleut.fr
-Description: Homemade Wordpress theme build with love
+Theme Name: wp-demainilpleut
+Theme URI: https://github.com/jveillet/wp-demainilpleut
 Author: Jérémie Veillet
-Author URI: https://demainilpleut.fr
-License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Author URI: https://github.com/jveillet
+Description: Custom responsive Wordpress theme built for demainilpleut.fr
 Version: 2.0.0
-Tags: light, one-page, mobile-first, responsive
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: brown, coffee, light, white, mobile-first, responsive, one-column, flexible-width, custom-header, custom-menu
+Text Domain: wp-demainilpleut
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 */
+@charset "UTF-8";
 
 /*   Base styles: opinionated defaults */
 
@@ -25,12 +28,14 @@ html {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   min-height: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   webkit-font-smoothing: antialiased;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -41,6 +46,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow: scroll;
 }
 
 ol,
@@ -185,6 +191,19 @@ textarea {
 	color: #719190;
 }
 
+/* Main wrapper */
+
+.wrapper {
+  display: table;
+  height: 100%;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.dip-main {
+  padding: 1em;
+}
+
 /* TopBar */
 
 .topBar {
@@ -228,7 +247,6 @@ only screen and (                min-resolution: 192dpi) and (min-width: 320px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
 
     .topBar-logo {
-      /*background: url(img/demainilpleut-logo@2x.png) no-repeat left center;*/
 	  background: url(img/demainilpleut-logo-white@2x.png) no-repeat left center;
       background-size: 40px 40px;
       float: left;
@@ -365,12 +383,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
     text-decoration: underline;
   }
 
-}
-
-/* Main */
-
-.dip-main {
-  padding: 1em;
 }
 
 /* Blog */
@@ -793,6 +805,12 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   .column.flow-opposite {
     float: right;
   }
+
+  .footer {
+    display: table-row;
+    height: 1px;
+    width: 100%;
+  }
   
 }
 
@@ -820,34 +838,4 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   font-size: .8em;
   text-align: center;
   margin-top: 1rem;
-}
-
-/* Responsive images */
-
-.dip-figure {
-  margin-bottom: .5em;
-  text-align: center;
-}
-
-.dip-figure img {
-  max-width: 100%;
-  text-align: center;
-}
-
-.dip-caption {
-  color: #706666;
-  display: block;
-  margin: 0 auto;
-  font-style: italic;
-  font-size: .8em;
-  padding: 0 0 .5em 0;
-  text-shadow: 0px 2px 8px rgba(10, 0, 0, .25);
-}
-
-.dip-figure--left {
-  text-align: left;
-}
-
-.dip-figure--right {
-  text-align: right;
 }
