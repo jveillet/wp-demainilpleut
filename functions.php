@@ -15,10 +15,6 @@
 	Theme Support
 \*------------------------------------*/
 
-if (!isset($content_width)) {
-    $content_width = 900;
-}
-
 if (function_exists('add_theme_support')) {
     // Add Menu Support
     add_theme_support('menus');
@@ -63,7 +59,7 @@ function dip_header_scripts() {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
     	wp_deregister_script('jquery'); // Deregister WordPress jQuery
-    	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.9.1'); // Google CDN jQuery
+    	wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3'); // Google CDN jQuery
     	wp_enqueue_script('jquery'); // Enqueue it!
 
     }
@@ -82,9 +78,9 @@ function dip_styles()
 // Register navigation
 function register_dip_menu() {
     register_nav_menus(array( // Using array to specify more menus if needed
-        /*'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)*/
+        /*'header-menu' => __('Header Menu', 'demainilpleut'), // Main Navigation
+        'sidebar-menu' => __('Sidebar Menu', 'demainilpleut'), // Sidebar Navigation
+        'extra-menu' => __('Extra Menu', 'demainilpleut') // Extra Navigation if needed (duplicate as many as you need!)*/
     ));
 }
 
