@@ -22,7 +22,7 @@
             </div><!-- end of row -->
 	        </div><!-- end of grid-container -->
           <div class="footer-disclaimer">
-            &copy; demainilpleut.fr 2014 - All this site's content under a <a rel="license" class="blog-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            &copy; <?php bloginfo('name'); ?> <?php echo date("Y"); ?>- All this site's content under a <a rel="license" class="blog-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
           </div>
         </div><!-- end of footer -->
 

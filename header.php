@@ -24,7 +24,7 @@
 
     <div id="topBar" class="topBar bg-cafe">
         <div class="topBar-logo">
-           <a href="<?php echo home_url(); ?>" class="topBar-logo-url">demainilpleut.fr</a>
+           <a href="<?php echo home_url(); ?>" class="topBar-logo-url"><?php bloginfo('name'); ?></a>
         </div><!-- end of topBar logo -->
         <div class="topBar-menu">
           <button class="topBar-menuBtn topBar-menuBtn--small">Menu</button>
