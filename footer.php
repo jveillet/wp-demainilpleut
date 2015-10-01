@@ -29,7 +29,7 @@
 		</div>
 		<!-- /wrapper -->
 
-		<?php //wp_footer(); ?>
+		<?php wp_footer(); ?>
 
     <script src="<?php echo get_template_directory_uri(); ?>/js/prism.min.js"></script>
     <script>

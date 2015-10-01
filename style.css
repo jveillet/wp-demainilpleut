@@ -28,7 +28,6 @@ html {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  /*overflow-y: scroll;*/
   min-height: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -204,6 +203,31 @@ textarea {
   padding: 1em;
 }
 
+/** Headings */
+h1 {
+  font-family: Palatino;
+}
+
+h2 {
+  font-family: Palatino;
+}
+
+h3 {
+  font-family: Palatino;
+}
+
+h4 {
+  font-family: Palatino;
+}
+
+h5 {
+  font-family: Palatino;
+}
+
+h6 {
+  font-family: Palatino;
+}
+
 /* TopBar */
 
 .topBar {
@@ -226,7 +250,6 @@ textarea {
 }
 
 .topBar-logo {
-  /*background: url(img/demainilpleut-logo.png) no-repeat left center;*/
   background: url(img/demainilpleut-logo-white.png) no-repeat left center;
   float: left;
   font-size: 1.2em;
@@ -495,10 +518,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 /* Paragraphs */
 
-.headings {
-  color: #0a0000;
-}
-
 .text {
   display: block;
   text-align: left;
@@ -510,7 +529,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .quote {
   border-left: 6px solid #a37958;
-  color: #706666;
   font-size: 1em;
   font-style: italic;
   padding: .5em;
@@ -613,6 +631,20 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 .archives>li a:hover,
 .archives>li a:focus {
   color: #d6ac8b;
+}
+
+.archives>p a:link,
+.archives>p a:visited {
+  color: #a37958;
+}
+
+.archives>p a:hover,
+.archives>p a:focus {
+  color: #d6ac8b;
+}
+
+.archives--small {
+  font-size: .8em;
 }
 
 /* Pagination */
