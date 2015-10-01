@@ -6,8 +6,12 @@ get_header(); ?>
 
 <main id="content" role="main" class="dip-main">
 
-<h2 class="coffee">About demainilpleut.fr</h2>
+<?php the_post(); ?>
 
-</main><!-- #content -->
+  <h2 class="coffee"><?php the_title(); ?></h2>
+
+  <p class="text"><?php the_content(); ?></p>
+
+</main>
 
 <?php get_footer(); ?>
