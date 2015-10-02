@@ -1,28 +1,28 @@
 			<!-- footer -->
-        <div class="footer bg-cream">
+        <div class="footer bg-purple-ligth">
 	        <div class="grid-container">
 	          <div class="row clearfix">
               <div class="column third">
-                <h3 class="coffee">Other posts</h3>
+                <h3 class="black">Other posts</h3>
                 <?php echo dip_list_posts(); ?>
               </div><!-- end of column -->
               <div class="column third">
-                <h3 class="coffee">Menu</h3>
+                <h3 class="black">Menu</h3>
                 <ul>
-	                <li><a href="<?php echo home_url(); ?>" class="blog-link">Blog</a></li>
-	                <li><a href="<?php echo home_url().'/archives'; ?>" class="blog-link">Archives</a></li>
-	                <li><a href="<?php echo home_url().'/about'; ?>" class="blog-link">About</a></li>
-	                <li><a href="<?php echo home_url().'/contact'; ?>" class="blog-link">Contact</a></li>
+	                <li><a href="<?php echo home_url(); ?>" class="footer-link">Blog</a></li>
+	                <li><a href="<?php echo home_url().'/archives'; ?>" class="footer-link">Archives</a></li>
+	                <li><a href="<?php echo home_url().'/about'; ?>" class="footer-link">About</a></li>
+	                <li><a href="<?php echo home_url().'/contact'; ?>" class="footer-link">Contact</a></li>
                 </ul>
               </div><!-- end of column -->
               <div class="column third">
-                <h3 class="coffee">Categories</h3>
+                <h3 class="black">Categories</h3>
                  <?php echo dip_list_categories(); ?> 
                </div><!-- end of column -->
             </div><!-- end of row -->
 	        </div><!-- end of grid-container -->
           <div class="footer-disclaimer">
-            &copy; <?php bloginfo('name'); ?> <?php echo date("Y"); ?>- All this site's content under a <a rel="license" class="blog-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            Copyright &copy; <?php bloginfo('name'); ?> <?php echo date("Y"); ?>- All this site's content under a <a rel="license" class="footer-disclaimer-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
           </div>
         </div><!-- end of footer -->
 

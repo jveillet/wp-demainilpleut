@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-	  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,600,300" rel="stylesheet" type="text/css"> 
+	<link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	  <?php wp_head(); ?>
 </head>
 
@@ -16,7 +17,7 @@
   <!-- wrapper -->
   <div class="wrapper">
 
-    <div id="topBar" class="topBar bg-cafe">
+    <div id="topBar" class="topBar bg-purple">
         <div class="topBar-logo">
            <a href="<?php echo home_url(); ?>" class="topBar-logo-url"><?php bloginfo('name'); ?></a>
         </div><!-- end of topBar logo -->

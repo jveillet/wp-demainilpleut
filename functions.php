@@ -136,7 +136,7 @@ function dip_wp_pagination() {
 // Custom Excerpts
 function dip_wp_index($length) {
 	// Create 20 Word Callback for Index page Excerpts, call using dip_wp_excerpt('dip_wp_index');
-    return 50;
+    return 150;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using dip_wp_excerpt('dip_wp_custom_post');
@@ -163,7 +163,7 @@ function dip_wp_excerpt($length_callback = '', $more_callback = '') {
 // Custom View Article link to Post
 function dip_view_article($more) {
     global $post;
-    return '...<p><a class="blog-link" href="' . get_permalink($post->ID) . '">' . __('Read more &#8594;', 'demainilpleut') . '</a></p>';
+    return '...<div><a class="blogPost-btn" href="' . get_permalink($post->ID) . '">' . __('Read more...', 'demainilpleut') . '</a></div>';
 }
 
 // Remove Admin bar
@@ -189,7 +189,7 @@ function dip_list_categories() {
 
     $term_list = '<ul>';
     foreach ($terms as $term) {
-      $term_list .= '<li><a href="'.home_url().'/category/'.$term->name.'" class="blog-link">'.$term->name.' ('.$term->count.')</a></li>';
+      $term_list .= '<li><a href="'.home_url().'/category/'.$term->name.'" class="footer-link">'.$term->name.' ('.$term->count.')</a></li>';
     }
     $term_list.= '</ul>';
     return $term_list;
@@ -205,7 +205,7 @@ function dip_list_posts() {
      if(mb_strlen($title)>22) {
       $title = mb_substr( $post->post_title, 0, 22 ).'...';
      }
-     $post_list .= '<li><a href="'.$post->guid.'" class="blog-link">'.$title.'</a></li>';
+     $post_list .= '<li><a href="'.$post->guid.'" class="footer-link">'.$title.'</a></li>';
   }
   $post_list .= '</ul>';
   wp_reset_postdata();
