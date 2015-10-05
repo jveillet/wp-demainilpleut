@@ -215,7 +215,7 @@ a, b, strong, dt {
 
 .topBar-logo-url,
 .topBar-Logo-url:visited {
-  color: #fff;
+  color: #ffffff;
   display: block;
   padding: .8em .5em;
   text-decoration: none;
@@ -276,8 +276,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   height: 3em;
   padding-right: 1em;
   padding-left: 1em;
-  background-color: #f0e6e6;
-  color: #a37958;
+  background-color: #ffffff;
+  color: #706694;
   border-radius: 4px;
   overflow: visible;
 }
@@ -515,7 +515,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   height: 3em;
   padding-right: 1em;
   padding-left: 1em;
-  background-color: #D6AC8B;
+  background-color: #d6ac8b;
   
   border-radius: 4px;
   overflow: visible;
