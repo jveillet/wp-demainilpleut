@@ -6,11 +6,11 @@ get_header(); ?>
 
 <main id="content" role="main" class="dip-main">
 
-  <?php get_search_form(); ?>
+  <?php //get_search_form(); ?>
 
   <?php the_post(); ?>
 
-  <h2 class="coffee"><?php the_title(); ?></h2>
+  <h1><?php the_title(); ?></h1>
 
   <p class="text"><?php the_content(); ?></p>
 
@@ -20,7 +20,7 @@ get_header(); ?>
 
   $my_query = new WP_Query('post_type=post&nopaging=1');
   if($my_query->have_posts()) {
-    echo '<h2 class="coffee">Last '.$how_many_last_posts.' Posts</h2>';
+    echo '<h2>Last '.$how_many_last_posts.' Posts</h2>';
     echo '<div class=""><ol>';
     $counter = 1;
     while($my_query->have_posts() && $counter <= $how_many_last_posts) {
@@ -35,14 +35,14 @@ get_header(); ?>
   }
   ?>
 
-  <h2 class="coffee">Our Authors</h2>
+  <h2>Our Authors</h2>
   <div>
     <ul class="archives">
       <?php wp_list_authors('exclude_admin=0&optioncount=1'); ?>
     </ul>
   </div>
 			
-  <h2 class="coffee">By Month</h2>
+  <h2>By Month</h2>
   <div class="archives">
     <p class="archives--small"><?php wp_get_archives('type=monthly&format=custom&after= |'); ?></p>
   </div>

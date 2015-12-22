@@ -7,7 +7,7 @@
 		<!-- section -->
 		<section>
 
-		    <?php get_template_part('searchform'); ?>
+		    <?php //get_template_part('searchform'); ?>
 
 			<?php get_template_part('loop'); ?>
 
