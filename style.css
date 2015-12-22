@@ -1,4 +1,5 @@
-/*
+@charset "UTF-8";
+/**
 Theme Name: wp-demainilpleut
 Theme URI: https://github.com/jveillet/wp-demainilpleut
 Author: Jérémie Veillet
@@ -13,7 +14,6 @@ Text Domain: wp-demainilpleut
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@charset "UTF-8";
 
 /*   Base styles: opinionated defaults */
 
@@ -24,7 +24,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 html {
-  font-size: 1em;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -32,7 +31,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
-  webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   height: 100%;
   overflow: hidden;
 }
@@ -203,7 +202,8 @@ a, b, strong, dt {
 }
 
 .dip-main {
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* TopBar */
@@ -213,13 +213,18 @@ a, b, strong, dt {
   padding: .5em;
 }
 
+.topBar--purple {
+  background-color: #C2BED1;
+}
+
 .topBar-logo-url,
 .topBar-Logo-url:visited {
-  color: #ffffff;
+  color: #392D65;
   display: block;
   padding: .8em .5em;
   text-decoration: none;
-  font-weight: 300;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 .topBar-logo-url:hover, 
@@ -228,41 +233,18 @@ a, b, strong, dt {
 }
 
 .topBar-logo {
-  background: url(img/demainilpleut-logo-white.png) no-repeat left center;
+  background: url(img/logo2.png);
+  background: url(img/logo2.svg) no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 38px;
   float: left;
-  font-size: 1.2em;
-  padding-left: 2em;
+  padding-left: 3.5em;
   position: relative;
   z-index: 1;
 }
 
-/* http://www.studiopress.com/design/css-background-size-graphics.htm */
-/* http://cleanthemes.co.uk/symmetry/make-your-logo-work-on-a-high-dpiretina-display/ */
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (                min-resolution: 192dpi) and (min-width: 320px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
-
-    .topBar-logo {
-	  background: url(img/demainilpleut-logo-white@2x.png) no-repeat left center;
-      background-size: 40px 40px;
-      float: left;
-      font-size: 1.2em;
-      padding-bottom: .1em;
-      padding-left: 1.9em;
-      position: relative;
-      z-index: 1;
-    }
-
-}
-
 .topBar-menuBtn {
   float: right;
-  display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
   font-family: inherit;
@@ -287,7 +269,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   padding-left: .5em;
   line-height: 2;
   height: 2em;
-  margin-top: .8rem;
+  margin-top: .8em;
 }
 
 .topBar-menuBtn:hover,
@@ -340,7 +322,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 @media all and (min-width: 47em) {
 
   .topBar {
-    line-height: 1em;
+    line-height: 1.5em;
     padding: .8em .5em;
     overflow: auto;
     width: 100%;
@@ -351,7 +333,15 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   }
   
   .topBar-logo {
+    background: url(img/logo2.png);
+    background: url(img/logo2.svg) no-repeat left center,
+    linear-gradient(transparent, transparent);
+    background-size: auto 54px;
     float: left;
+    font-size: 1.2em;
+    padding-left: 4em;
+    position: relative;
+    z-index: 1;
   }
   
   .topBar-menuBtn {
@@ -369,20 +359,30 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
   .topBar .topBar-navigation li {
     display: inline-block;
-    margin: .5em .25em;
+    margin: 1em .25em;
   }
 
   .topBar-navigation-item,
   .topBar-navigation-item:visited {
 	  border: 0;
-	  color: #fff;
+	  color: #392D65;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 600;
   }
 
   .topBar-navigation-item:hover,
   .topBar-navigation-item:focus {
     text-decoration: underline;
+  }
+
+  .topBar-logo-url,
+  .topBar-Logo-url:visited {
+    color: #392D65;
+    display: block;
+    padding: .8em .5em;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
   }
 
 }
@@ -404,7 +404,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .blogPost-summary {
   font-size: .9em;
-  border-top: 1px solid #f0e6e6;
+  border-top: 1px solid #C2BED1;
   margin-top: .8em;
   padding-top: .5em;
 }
@@ -418,23 +418,13 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   text-decoration: underline;
 }
 
-/*
-.blogPost p a:active {
-  background: -webkit-linear-gradient(#d6ac8b, #a37958);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  top: 1px;
-}
-*/
-
 .blogPost-pubDate {
-  color: #706666;
+  color: #938CAE;
   font-size: .8em;
   font-style: italic;
 }
 
 .blogPost-categories {
-  color: #706666;
   display: inline-block;
   font-size: .8em;
   margin-top: .4em;
@@ -443,7 +433,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 .blogPost-categories a,
 .blogPost-categories a:link,
 .blogPost-categories a:visited {
-  color: #d6ac8b;
+  color: #706694;
   text-decoration: none;
 }
 
@@ -453,7 +443,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .blogPost-readingTime {
   background: transparent url(img/demainilpleut-time.png) no-repeat left center;
-  color: #706666;
+  color: #938CAE;
   font-size: .9em;
   display: block;
   padding: .5em 0 .5em 2em;
@@ -461,9 +451,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .blogPost-author--link,
 .blogPost-author--link:visited {
-  color: #d6ac8b;
+  color: #706694;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .blogPost-author--link:hover{
@@ -490,7 +480,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .blog-link,
 .blog-link:visited {
-  color: #d6ac8b;
+  color: #706694;
   text-decoration: none;
 }
 
@@ -515,8 +505,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   height: 3em;
   padding-right: 1em;
   padding-left: 1em;
-  background-color: #d6ac8b;
-  
+  background-color: #706694;
   border-radius: 4px;
   overflow: visible;
 }
@@ -546,13 +535,16 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   text-align: left;
   -webkit-margin-before: 1em;
   -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-before: 1em;
+  -moz-margin-after: 1em;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
 }
 
 .quote {
   border-left: 6px solid #a37958;
-  font-size: 1em;
   font-style: italic;
   padding: .5em;
 }
@@ -566,9 +558,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 .about-author-avatar img {
   display: block;
   margin: 0 auto;
-  border-radius: 40px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
+  border-radius: 40px;
 }
 
 .about-author {
@@ -578,7 +570,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .about-author-name,
 .about-author-name:visited {
-  color: #d6ac8b;
+  color: #706694;
   text-decoration: none;
 }
 
@@ -598,10 +590,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   .about-author-avatar img {
     display: block;
     float: left;
-    margin: 4px 12px 12px 0;
-    border-radius: 40px;
+    margin: 4px 12px 12px 0; 
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
+    border-radius: 40px;
   }
 
   .about-author {
@@ -612,7 +604,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
   .about-author-name,
   .about-author-name:visited {
-    color: #d6ac8b;
+    color: #706694;
     padding-left: .6em;
     text-decoration: none;
   }
@@ -633,13 +625,12 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .about-author-bio a:link,
 .about-author-bio a:visited {
-  color: #d6ac8b;
+  color: #706694;
   text-decoration: none;
 }
 
 .about-author-bio a:hover,
 .about-author-bio a:focus {
-  color: #d6ac8b;
   text-decoration: underline;
 }
 
@@ -647,22 +638,24 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .archives>li a:link,
 .archives>li a:visited {
-  color: #a37958;
+  color: #706694;
+  text-decoration: none;
 }
 
 .archives>li a:hover,
 .archives>li a:focus {
-  color: #d6ac8b;
+  text-decoration: underline;
 }
 
 .archives>p a:link,
 .archives>p a:visited {
-  color: #a37958;
+  color: #706694;
+  text-decoration: none;
 }
 
 .archives>p a:hover,
 .archives>p a:focus {
-  color: #d6ac8b;
+  text-decoration: underline;
 }
 
 .archives--small {
@@ -672,7 +665,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 /* Pagination */
 
 .pagination {
-  padding-top: 2em;
   padding-bottom: 1em;
 }
 
@@ -683,17 +675,17 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 .page-numbers a,
 .page-numbers a:link,
 .page-numbers a:visited {
-  color: #a37958;
+  color: #706694;
   text-decoration: none;
 }
 
 .page-numbers a:hover {
-  color: #d6ac8b;
+  color: #938CAE;
   text-decoration: underline;
 }
 
 .page-numbers li {
-  border-right: 1px solid #f0e6e6;
+  border-right: 1px solid #938CAE;
   float: left;
   font-weight: bold;
   height: 1.6rem;
@@ -706,13 +698,13 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 }
 
 .page-numbers .current {
-  color: #706666;
+  color: #C2BED1;
   background: none;
 }
 
 @media all and (min-width: 47em) {
   .page-numbers li {
-    border-right: 1px solid #f0e6e6;
+    border-right: 1px solid #938CAE;
     float: left;
     font-weight: bold;
     height: 1.6rem;
@@ -888,6 +880,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   padding-top: 1rem;
 }
 
+.footer--lightgreen {
+  background-color: #edf5db;
+}
+
 .footer-disclaimer {
   font-size: .8em;
   text-align: center;
@@ -896,7 +892,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .footer-disclaimer-link,
 .footer-disclaimer-link:visited {
-  color: #392d65;
+  color: #8ca755;
   text-decoration: none;
   font-weight: 600;
 }
@@ -907,9 +903,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .footer-link,
 .footer-link:visited {
-  color: #392d65;
+  color: #8ca755;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer-link:hover {

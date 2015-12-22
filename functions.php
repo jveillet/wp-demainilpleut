@@ -66,8 +66,7 @@ function dip_header_scripts() {
 }
 
 // Load styles
-function dip_styles()
-{
+function dip_styles() {
     wp_register_style('prism', get_template_directory_uri().'/css/prism.css', array(), '1.0', 'all');
     wp_enqueue_style('prism'); // Enqueue it!
 
@@ -135,7 +134,7 @@ function dip_wp_pagination() {
 
 // Custom Excerpts
 function dip_wp_index($length) {
-	// Create 20 Word Callback for Index page Excerpts, call using dip_wp_excerpt('dip_wp_index');
+	// Create 150 Word Callback for Index page Excerpts, call using dip_wp_excerpt('dip_wp_index');
     return 150;
 }
 
@@ -213,7 +212,6 @@ function dip_list_posts() {
 }
 
 function dip_reading_time($myContent) {
-  //$myContent = $post->post_content; // wordpress users only
   $word = str_word_count(strip_tags($myContent));
   $m = floor($word / 100);
   $s = floor($word % 100 / (100 / 60));

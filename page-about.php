@@ -8,7 +8,7 @@ get_header(); ?>
 
 <?php the_post(); ?>
 
-  <h2 class="coffee"><?php the_title(); ?></h2>
+  <h1><?php the_title(); ?></h1>
 
   <p class="text"><?php the_content(); ?></p>
 

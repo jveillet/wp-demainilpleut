@@ -5,7 +5,7 @@
 		<!-- section -->
 		<section>
 
-		<h2 class="coffee">Contact</h2>
+		<h1>Contact</h1>
 
 		</section><!-- end of section -->
 		
