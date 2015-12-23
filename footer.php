@@ -11,8 +11,6 @@
                 <ul>
 	                <li><a href="<?php echo home_url(); ?>" class="footer-link">Blog</a></li>
 	                <li><a href="<?php echo home_url().'/archives'; ?>" class="footer-link">Archives</a></li>
-	                <li><a href="<?php echo home_url().'/about'; ?>" class="footer-link">About</a></li>
-	                <li><a href="<?php echo home_url().'/contact'; ?>" class="footer-link">Contact</a></li>
                 </ul>
               </div><!-- end of column -->
               <div class="column third">
