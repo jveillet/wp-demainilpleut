@@ -411,11 +411,9 @@ a, b, strong, dt {
 
 .blogPost p a:link,
 .blogPost p a:visited {
-  color: #d6ac8b;
-}
-
-.blogPost p a:hover {
+  color: #706694;
   text-decoration: underline;
+
 }
 
 .blogPost-pubDate {

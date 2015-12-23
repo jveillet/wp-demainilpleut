@@ -26,9 +26,7 @@
           <nav id="js-menu" role="navigation" class="topBar-navigation">
             <ul>
               <li><a href="<?php echo home_url();?>" class="topBar-navigation-item">Home</a></li>
-              <li><a href="<?php echo home_url().'/about'; ?>" class="topBar-navigation-item">About</a></li>
               <li><a href="<?php echo home_url().'/archives'; ?>" class="topBar-navigation-item">Archives</a></li>
-              <li><a href="<?php echo home_url().'/contact'; ?>" class="topBar-navigation-item">Contact</a></li>
             </ul>
           </nav><!-- end of topBarNavigation -->
         </div><!-- end of topBarMenu -->
