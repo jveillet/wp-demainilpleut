@@ -233,7 +233,7 @@ a, b, strong, dt {
 }
 
 .topBar-logo {
-  background: url(img/logo2.png);
+  background: url(img/logo2-small.png) no-repeat left center;
   background: url(img/logo2.svg) no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 38px;
@@ -333,9 +333,9 @@ a, b, strong, dt {
   }
   
   .topBar-logo {
-    background: url(img/logo2.png);
+    background: url(img/logo2.png) no-repeat left center;
     background: url(img/logo2.svg) no-repeat left center,
-    linear-gradient(transparent, transparent);
+      linear-gradient(transparent, transparent);
     background-size: auto 54px;
     float: left;
     font-size: 1.2em;
@@ -440,7 +440,10 @@ a, b, strong, dt {
 }
 
 .blogPost-readingTime {
-  background: transparent url(img/demainilpleut-time.png) no-repeat left center;
+  background: url(img/icon-time-small.png) no-repeat left center;
+  background: url(img/icon-time.svg) no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 20px;
   color: #938CAE;
   font-size: .9em;
   display: block;
@@ -456,24 +459,6 @@ a, b, strong, dt {
 
 .blogPost-author--link:hover{
   text-decoration: underline;
-}
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (                min-resolution: 192dpi) and (min-width: 320px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
-
-  .blogPost-readingTime {
-    background: transparent url(img/demainilpleut-time@2x.png) no-repeat left center;
-    background-size: 16px 16px;
-    color: #706666;
-    display: block;
-    padding: .5em 0 .5em 1.9em;
-  }
-
 }
 
 .blog-link,
@@ -545,6 +530,25 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   border-left: 6px solid #a37958;
   font-style: italic;
   padding: .5em;
+}
+
+/* Author */
+
+.author a:link,
+.author a:visited {
+  color: #706694;
+  text-decoration: none;
+}
+
+.author a:hover,
+.author a:focus {
+  text-decoration: underline;
+}
+
+.avatar {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
 }
 
 /* About */
