@@ -397,7 +397,7 @@ a, b, strong, dt {
 .blogPost-title a:link,
 .blogPost-title a:visited {
   font-family: 'Gentium Book Basic', Palatino, Arial, serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #0a0000;
   text-decoration: none;
 }
@@ -511,6 +511,21 @@ a, b, strong, dt {
   padding: 0;
 }
 
+@media all and (min-width: 47em) {
+  .blogPost-wrapper {
+    margin: 0 auto;
+    width: 700px;
+  }
+
+  h1.blogPost-title {
+    font-size: 3.5em;
+  }
+
+  .blogPost-content {
+    font-size: 1.3em;
+  }
+}
+
 /* Paragraphs */
 
 .text {
@@ -560,9 +575,9 @@ a, b, strong, dt {
 .about-author-avatar img {
   display: block;
   margin: 0 auto;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  border-radius: 40px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
 }
 
 .about-author {
@@ -913,23 +928,3 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 .footer-link:hover {
   text-decoration: underline;
 }
-
-/* New colors */
-
-.color-primary-0 { color: #D6AC8B } /* Main Primary color */
-.color-primary-1 { color: #FFF0E4 }
-.color-primary-2 { color: #FCDDC5 }
-.color-primary-3 { color: #B3825B }
-.color-primary-4 { color: #925F37 }
-
-.color-secondary-1-0 { color: #706694 } /* Main Secondary color (1) */
-.color-secondary-1-1 { color: #C2BED1 }
-.color-secondary-1-2 { color: #938CAE }
-.color-secondary-1-3 { color: #51467C }
-.color-secondary-1-4 { color: #392D65 }
-
-.color-secondary-2-0 { color: #B0C882 } /* Main Secondary color (2) */
-.color-secondary-2-1 { color: #EDF5DB }
-.color-secondary-2-2 { color: #DAEBB8 }
-.color-secondary-2-3 { color: #8CA755 }
-.color-secondary-2-4 { color: #6C8833 }
