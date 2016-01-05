@@ -45,6 +45,7 @@ body {
   padding: 0;
   width: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 ol,
