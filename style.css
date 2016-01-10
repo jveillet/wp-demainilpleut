@@ -543,9 +543,19 @@ a, b, strong, dt {
 }
 
 .quote {
-  border-left: 6px solid #a37958;
+  border-left: 6px solid #edf5db;
   font-style: italic;
   padding: .5em;
+}
+
+code {
+  font-size: .8rem;
+}
+
+@media all and (min-width: 47em) {  
+  code {
+    font-size: 1rem;
+  }
 }
 
 /* Author */
