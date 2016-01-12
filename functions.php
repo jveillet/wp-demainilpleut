@@ -57,11 +57,9 @@ function dip_nav() {
 // Load scripts (header.php)
 function dip_header_scripts() {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-
     	wp_deregister_script('jquery'); // Deregister WordPress jQuery
-    	wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3'); // Google CDN jQuery
-    	wp_enqueue_script('jquery'); // Enqueue it!
-
+    	//wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3'); // Google CDN jQuery
+    	//wp_enqueue_script('jquery'); // Enqueue it!
     }
 }
 
@@ -69,7 +67,6 @@ function dip_header_scripts() {
 function dip_styles() {
     wp_register_style('prism', get_template_directory_uri().'/css/prism.min.css', array(), '1.0', 'all');
     wp_enqueue_style('prism'); // Enqueue it!
-
     wp_register_style('demainilpleut', get_template_directory_uri().'/css/style.min.css', array(), '1.0', 'all');
     wp_enqueue_style('demainilpleut'); // Enqueue it!
 }
@@ -85,18 +82,18 @@ function register_dip_menu() {
 
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
 function my_wp_nav_menu_args($args = '') {
-    $args['container'] = false;
-    return $args;
+  $args['container'] = false;
+  return $args;
 }
 
 // Remove Injected classes, ID's and Page ID's from Navigation <li> items
 function my_css_attributes_filter($var) {
-    return is_array($var) ? array() : '';
+  return is_array($var) ? array() : '';
 }
 
 // Remove invalid rel attribute values in the categorylist
 function remove_category_rel_from_category_list($thelist) {
-    return str_replace('rel="category tag"', 'rel="tag"', $thelist);
+  return str_replace('rel="category tag"', 'rel="tag"', $thelist);
 }
 
 // Add page slug to body class, love this - Credit: Starkers Wordpress Theme
@@ -128,19 +125,18 @@ function dip_wp_pagination() {
         'type'      => 'list',
         'total'     => $wp_query->max_num_pages
     ));
-
     echo $paginate;
 }
 
 // Custom Excerpts
 function dip_wp_index($length) {
 	// Create 150 Word Callback for Index page Excerpts, call using dip_wp_excerpt('dip_wp_index');
-    return 150;
+  return 150;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using dip_wp_excerpt('dip_wp_custom_post');
 function dip_wp_custom_post($length) {
-    return 40;
+  return 40;
 }
 
 // Create the Custom Excerpts callback
@@ -222,6 +218,16 @@ function dip_reading_time($myContent) {
   return $est;
 }
 
+function disable_emojis() {
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+}
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -231,6 +237,7 @@ add_action('init', 'dip_header_scripts'); // Add Custom Scripts to wp_head
 add_action('wp_enqueue_scripts', 'dip_styles'); // Add Theme Stylesheet
 add_action('init', 'register_dip_menu'); // Add HTML5 Blank Menu
 add_action('init', 'dip_wp_pagination'); // Add our HTML5 Pagination
+add_action( 'init', 'disable_emojis' ); // Disable emojis
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
