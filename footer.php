@@ -15,7 +15,7 @@
               </div><!-- end of column -->
               <div class="column third">
                 <h3 class="black">Categories</h3>
-                 <?php echo dip_list_categories(); ?> 
+                 <?php echo dip_list_categories(); ?>
                </div><!-- end of column -->
             </div><!-- end of row -->
 	        </div><!-- end of grid-container -->
@@ -29,13 +29,13 @@
 
 		<?php wp_footer(); ?>
 
-    <script src="<?php echo get_template_directory_uri(); ?>/js/prism.min.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/js/prism.min.js"></script>
     <script>
     $(document).ready(function() {
       $('body').addClass('js');
       var $menu = $('#js-menu'),
       $menulink = $('.topBar-menuBtn');
-  
+
       $menulink.click(function() {
         $menulink.toggleClass('active');
         $menu.toggleClass('active');
