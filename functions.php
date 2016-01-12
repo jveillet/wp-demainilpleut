@@ -67,10 +67,10 @@ function dip_header_scripts() {
 
 // Load styles
 function dip_styles() {
-    wp_register_style('prism', get_template_directory_uri().'/css/prism.css', array(), '1.0', 'all');
+    wp_register_style('prism', get_template_directory_uri().'/css/prism.min.css', array(), '1.0', 'all');
     wp_enqueue_style('prism'); // Enqueue it!
 
-    wp_register_style('demainilpleut', get_template_directory_uri().'/style.css', array(), '1.0', 'all');
+    wp_register_style('demainilpleut', get_template_directory_uri().'/css/style.min.css', array(), '1.0', 'all');
     wp_enqueue_style('demainilpleut'); // Enqueue it!
 }
 
@@ -218,7 +218,6 @@ function dip_reading_time($myContent) {
   if($s >= 20) {
     $m++;
   }
-  //$est = $m . ' minute' . ($m == 1 ? '' : 's') . ', ' . $s . ' second' . ($s == 1 ? '' : 's');
   $est = $m . ' minute' . ($m == 1 ? '' : 's');
   return $est;
 }

@@ -234,8 +234,8 @@ a, b, strong, dt {
 }
 
 .topBar-logo {
-  background: url(img/logo2-small.png) no-repeat left center;
-  background: url(img/logo2.svg) no-repeat left center,
+  background: url(../img/logo2-small.png) no-repeat left center;
+  background: url(../img/logo2.svg) no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 38px;
   float: left;
@@ -334,8 +334,8 @@ a, b, strong, dt {
   }
   
   .topBar-logo {
-    background: url(img/logo2.png) no-repeat left center;
-    background: url(img/logo2.svg) no-repeat left center,
+    background: url(../img/logo2.png) no-repeat left center;
+    background: url(../img/logo2.svg) no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 54px;
     float: left;
@@ -441,8 +441,8 @@ a, b, strong, dt {
 }
 
 .blogPost-readingTime {
-  background: url(img/icon-time-small.png) no-repeat left center;
-  background: url(img/icon-time.svg) no-repeat left center,
+  background: url(../img/icon-time-small.png) no-repeat left center;
+  background: url(../img/icon-time.svg) no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 20px;
   color: #938CAE;
