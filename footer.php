@@ -28,7 +28,7 @@
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/js/prism.min.js"></script>
     <script>
     $(document).ready(function() {
@@ -42,7 +42,8 @@
         return false;
       });
     });
-     </script>
-
+    </script>
 	</body>
 </html>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,600italic,600,300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" rel="stylesheet">
