@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,600italic,600,300" rel="stylesheet" type="text/css"> 
-	<link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,600italic,600,300" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" rel="stylesheet">
 	  <?php wp_head(); ?>
 </head>
 
