@@ -23,10 +23,9 @@
 			<div class="about">
         <h2 class="about-title">About the Author</h2>
         <div class="about-author">
-          <a class="about-author-avatar" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><img src="<?php echo get_wp_user_avatar_src(get_the_author_meta('ID')); ?>" width="80" height="80" alt="<?php echo the_author_meta('display_name'); ?>"></a>
-          <a class="about-author-name" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php echo the_author_meta('display_name'); ?></a>
           <div class="about-author-bio">
-            <p><?php echo get_the_author_meta('description'); ?></p>
+            <a class="about-author-avatar" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><img src="<?php echo get_wp_user_avatar_src(get_the_author_meta('ID')); ?>" width="80" height="80" alt="<?php echo the_author_meta('display_name'); ?>"></a>
+            <p><span class="about-author-name"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php echo the_author_meta('display_name'); ?></a></span><br><small><?php echo get_the_author_meta('description'); ?></small></p>
           </div><!-- end of author bio -->
         </div><!-- end of about author -->
       </div><!-- end of about section -->
