@@ -919,3 +919,54 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 .footer-link:hover {
   text-decoration: underline;
 }
+
+/* Styleguide */
+
+.patterns {
+  background-color: #fff;
+  padding: 1em;
+}
+
+.pattern-item {
+  border-bottom: 1px solid #181818;
+  padding-bottom: 1em;
+}
+
+.pattern-item-title {
+  color: #0a0000;
+}
+
+.colors {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
+
+.color {
+  padding: .5em;
+  width: 5em;
+  height: 5em;
+  margin-top: 1em;
+}
+
+.color-bg {
+
+}
+
+.color-text {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
