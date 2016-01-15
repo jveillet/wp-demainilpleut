@@ -6,10 +6,10 @@
     <meta name="description" content="demainilpleut.fr's Style guide">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> 
-    <link rel="stylesheet" href="css/styleguide.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styleguide.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/prism.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
@@ -75,7 +75,7 @@
         <h1 class="patternItemTitle">Blockquote</h1>
         <p class="quote coffee">&ldquo;Let me explain something to you. Um, I am not “Mr. Lebowski”. You’re Mr. Lebowski. I’m the Dude. So that’s what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you’re not into the whole brevity thing.&rdquo; &mdash;The Big Lebowski</p>
       </div><!-- end of pattern item -->
-      
+
 	  <!--Pattern HTML-->
 		<div class="patternItem">
       <h1 class="patternItemTitle">TopBar</h1>
@@ -132,10 +132,10 @@
         <div class="about">
           <h2 class="about-title">About the Author</h2>
           <div class="about-author">
-            <a class="about-author-avatar" href="#"><img src="https://pbs.twimg.com/profile_images/1846430550/tetocarre__1_.jpg" width="80" height="80" alt="author"></a>
-            <a class="about-author-name" href="#">Jérémie Veillet</a>
             <div class="about-author-bio">
-              <p>I am not a hacker, not a designer, nor a web developer. I am a french software developer, who works @ <a href="https://www.accenture.com" class="blogLink">Accenture</a>, and I love art in every shape and form. I live in Nantes, France, with my wonderfull girlfriend, and my little boy, where I wrote for <a href="#" class="blogLink">demainilpleut.fr</a>, and share some good times my my awesome friends and family.</p>
+            <a class="about-author-avatar" href="#"><img src="https://demainilpleut.fr/wp-content/uploads/2015/12/capitan.jpg" width="80" height="80" alt="author"></a>
+              <!--<a class="about-author-name" href="#">Reno Raines</a>-->
+              <p><span class="about-author-name"><a href="#">Reno Raines</a></span><br><small>He was a cop, and good at his job. But he committed the ultimate sin—and testified against other cops gone bad. Cops that tried to kill him, but got the woman he loved instead. Framed for murder, now he prowls the badlands...an outlaw hunting outlaws...a bounty hunter...a RENEGADE, demain il pleut's administrator.</small></p>
             </div><!-- end of author bio -->
           </div><!-- end of about author -->
         </div><!-- end of about section -->
@@ -244,7 +244,7 @@
                    <li><a href="#" class="blog-link">Uncategorized (7)</a></li>
                    <li><a href="#" class="blog-link">Uncategorized (2)</a></li>
                    <li><a href="#" class="blog-link">Uncategorized (4)</a></li>
-                 </ul> 
+                 </ul>
                </div><!-- end of column -->
             </div><!-- end of row -->
           </div><!-- end of grid-container -->
@@ -255,7 +255,7 @@
       </div><!-- end of pattern item -->
 
     </div><!-- end of pattern library -->
- 
+
   <script src="js/prism.min.js"></script>
 
   <script>
@@ -263,7 +263,7 @@
       $('body').addClass('js');
       var $menu = $('#js-menu'),
       $menulink = $('.topBar-menuBtn');
-  
+
       $menulink.click(function() {
         $menulink.toggleClass('active');
         $menu.toggleClass('active');
