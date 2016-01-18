@@ -127,38 +127,6 @@ a, b, strong, dt {
   background-color: #0a0000;
 }
 
-.bg-coffee {
-  background-color: #a37958;
-}
-
-.bg-latte {
-  background-color: #d6ac8b;
-}
-
-.bg-spoon {
-  background-color: #706666;
-}
-
-.bg-sugar {
-  background-color: #f0e6e6;
-}
-
-.bg-cafe {
-  background: -webkit-linear-gradient(-90deg, #a37958 10%, #B08665 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(-90deg, #a37958 10%, #B08665 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(-90deg, #a37958 10%, #B08665 90%); /* IE10 */
-  background:      -o-linear-gradient(-90deg, #a37958 10%, #B08665 90%); /* Opera 11.10+ */
-  background:         linear-gradient(-90deg, #a37958 10%, #B08665 90%); /* W3C */
-}
-
-.bg-cream {
-  background: -webkit-linear-gradient(-90deg, #f0e6e6 10%, #FDF3F3 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(-90deg, #f0e6e6 10%, #FDF3F3 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(-90deg, #f0e6e6 10%, #FDF3F3 90%); /* IE10 */
-  background:      -o-linear-gradient(-90deg, #f0e6e6 10%, #FDF3F3 90%); /* Opera 11.10+ */
-  background:         linear-gradient(-90deg, #f0e6e6 10%, #FDF3F3 90%); /* W3C */
-}
-
 .bg-purple {
   background-color: #938CAE;
 }
@@ -171,22 +139,6 @@ a, b, strong, dt {
 
 .black {
   color: #0a0000;
-}
-
-.coffee {
-  color: #a37958;
-}
-
-.latte {
-  color: #d6ac8b;
-}
-
-.spoon {
-  color: #706666;
-}
-
-.sugar {
-  color: #f0e6e6;
 }
 
 .purple {
@@ -543,7 +495,7 @@ a, b, strong, dt {
 }
 
 .quote {
-  border-left: 6px solid #edf5db;
+  border-left: 6px solid #8ca755;
   font-style: italic;
   padding: .5em;
 }
@@ -556,6 +508,18 @@ code {
   code {
     font-size: 1rem;
   }
+}
+
+/* Utility classes */
+
+.list-unordered {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+.list-ordered {
+  list-style-type: decimal;
+  margin-left: 2em;
 }
 
 /* Author */
@@ -928,8 +892,12 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 }
 
 .pattern-item {
-  border-bottom: 1px solid #181818;
+  border-bottom: 1px solid #938cae;
   padding-bottom: 1em;
+}
+
+.pattern:last-child .pattern-item {
+  border: none;
 }
 
 .pattern-item-title {
@@ -937,36 +905,26 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 }
 
 .colors {
-  /* We first create a flex layout context */
   display: flex;
-
-  /* Then we define the flow direction and if we allow the items to wrap
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
   flex-flow: row wrap;
-
-  /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .color {
-  padding: .5em;
   width: 5em;
   height: 5em;
-  margin-top: 1em;
-}
-
-.color-bg {
-
+  text-align: center;
 }
 
 .color-text {
-  font-size: 1em;
-  color: white;
+  font-size: .8em;
+  color: #ffffff;
   font-weight: bold;
-  text-align: center;
   width: 100%;
+  margin-top: 70%;
+}
+
+.color-text-inverted {
+  color: #0a0000;
 }
 
