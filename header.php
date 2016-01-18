@@ -25,6 +25,7 @@
         <ul>
           <li><a href="<?php echo home_url();?>" class="topBar-navigation-item">Home</a></li>
           <li><a href="<?php echo home_url().'/archives'; ?>" class="topBar-navigation-item">Archives</a></li>
+          <li><a href="<?php echo home_url().'/styleguide'; ?>" class="topBar-navigation-item">Styleguide</a></li>
         </ul>
       </nav><!-- end of topBarNavigation -->
     </div><!-- end of topBarMenu -->

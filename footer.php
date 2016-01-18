@@ -11,6 +11,7 @@
                 <ul>
 	                <li><a href="<?php echo home_url(); ?>" class="footer-link">Blog</a></li>
 	                <li><a href="<?php echo home_url().'/archives'; ?>" class="footer-link">Archives</a></li>
+                  <li><a href="<?php echo home_url().'/styleguide'; ?>" class="footer-link">Styleguide</a></li>
                 </ul>
               </div><!-- end of column -->
               <div class="column third">
