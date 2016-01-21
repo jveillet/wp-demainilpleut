@@ -137,7 +137,7 @@ get_header(); ?>
 <div class="pattern">
   <h1 class="pattern-title">About</h1>
   <div class="pattern-item">
-    <div class="about">
+    <div class="about about-box">
       <h2 class="about-title">About the Author</h2>
       <div class="about-author">
         <div class="about-author-bio">

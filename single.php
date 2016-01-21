@@ -20,7 +20,7 @@
         <span class="blogPost-categories">Published in <?php the_category(', '); ?></span>
 			</article><!-- end of article -->
 
-			<div class="about">
+      <div class="about about-box">
         <h2 class="about-title">About the Author</h2>
         <div class="about-author">
           <div class="about-author-bio">
