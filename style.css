@@ -479,6 +479,27 @@ a, b, strong, dt {
   }
 }
 
+/* Alerts */
+
+.alert {
+  padding: .5em;
+  background-color: #F1F1F1;
+  color: #0A0000;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .3);
+}
+
+.alert--info {
+  border-left: .5em solid rgb(52, 152, 219);
+}
+
+.alert--warning {
+  border-left: .5em solid rgb(242, 121, 53);
+}
+
+.alert--danger {
+  border-left: .5em solid rgb(207, 0, 15);
+}
+
 /* Paragraphs */
 
 .text {
