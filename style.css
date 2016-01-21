@@ -37,6 +37,7 @@ html {
 }
 
 body {
+  background: #F5F5F5;
   border: 0;
   color: #0a0000;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -483,8 +484,7 @@ a, b, strong, dt {
 
 .alert {
   padding: .5em;
-  background-color: #F1F1F1;
-  color: #0A0000;
+  background-color: #ffffff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .3);
 }
 
@@ -564,6 +564,18 @@ code {
 
 /* About */
 
+.about {
+  background: #ffffff;
+  color: #0a0000;
+  margin-bottom: .5em;
+}
+
+.about-box {
+  padding: .5em;
+  background: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .3);
+}
+
 .about-title {
   text-align: center;
 }
@@ -610,7 +622,7 @@ code {
   }
 
   .about-author {
-    width: 600px;
+    width: 700px;
     max-width: 100%;
     margin: 0 auto;
   }
