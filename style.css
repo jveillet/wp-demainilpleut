@@ -344,7 +344,7 @@ a, b, strong, dt {
 /* Blog */
 
 .blogPost {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 .blogPost-title,
@@ -468,7 +468,8 @@ a, b, strong, dt {
 @media all and (min-width: 47em) {
   .blogPost-wrapper {
     margin: 0 auto;
-    width: 700px;
+    width: 500px;
+    width: calc(60vw + 6em);
   }
 
   h1.blogPost-title {
@@ -477,6 +478,14 @@ a, b, strong, dt {
 
   .blogPost-content {
     font-size: 1.3em;
+  }
+}
+
+@media all and (min-width: 67em) {
+  .blogPost-wrapper {
+    margin: 0 auto;
+    width: 750px;
+    width: calc(40vw + 6em);
   }
 }
 
@@ -567,7 +576,7 @@ code {
 .about {
   background: #ffffff;
   color: #0a0000;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
 }
 
 .about-box {
@@ -622,7 +631,7 @@ code {
   }
 
   .about-author {
-    width: 700px;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -960,4 +969,3 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 .color-text-inverted {
   color: #0a0000;
 }
-
