@@ -15,17 +15,17 @@
   <!-- wrapper -->
   <div class="wrapper">
 
-    <div id="topBar" class="topBar topBar--purple">
-      <div class="topBar-logo">
-       <a href="<?php echo home_url(); ?>" class="topBar-logo-url"><?php bloginfo('name'); ?></a>
+    <div class="topbar bg-purple--dark">
+      <div class="topbar-logo">
+       <a href="<?php echo home_url(); ?>" class="topbar-logo-url"><?php bloginfo('name'); ?></a>
      </div><!-- end of topBar logo -->
-     <div class="topBar-menu">
-      <button class="topBar-menuBtn topBar-menuBtn--small">Menu</button>
-      <nav id="js-menu" role="navigation" class="topBar-navigation">
+     <div class="topbar-menu">
+      <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
+      <nav id="js-menu" role="navigation" class="topbar-navigation">
         <ul>
-          <li><a href="<?php echo home_url();?>" class="topBar-navigation-item">Home</a></li>
-          <li><a href="<?php echo home_url().'/archives'; ?>" class="topBar-navigation-item">Archives</a></li>
-          <li><a href="<?php echo home_url().'/styleguide'; ?>" class="topBar-navigation-item">Styleguide</a></li>
+          <li><a href="<?php echo home_url();?>" class="topbar-navigation-item">Home</a></li>
+          <li><a href="<?php echo home_url().'/archives'; ?>" class="topbar-navigation-item">Archives</a></li>
+          <li><a href="<?php echo home_url().'/styleguide'; ?>" class="topbar-navigation-item">Styleguide</a></li>
         </ul>
       </nav><!-- end of topBarNavigation -->
     </div><!-- end of topBarMenu -->

@@ -158,7 +158,7 @@ function dip_wp_excerpt($length_callback = '', $more_callback = '') {
 // Custom View Article link to Post
 function dip_view_article($more) {
     global $post;
-    return '...<div><a class="blogPost-btn" href="' . get_permalink($post->ID) . '">' . __('Read more...', 'demainilpleut') . '</a></div>';
+    return '...<div><a class="article-btn" href="' . get_permalink($post->ID) . '">' . __('Read more...', 'demainilpleut') . '</a></div>';
 }
 
 // Remove Admin bar

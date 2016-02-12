@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main id="content" role="main" class="dip-main">
+	<main id="content" role="main" class="main-container">
 
 
 		<h1><?php the_title(); ?></h1>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    
+
     <!-- main -->
 	<main role="main" class="dip-main">
 		<!-- section -->
@@ -14,7 +14,7 @@
 			<?php get_template_part('pagination'); ?>
 
 		</section><!-- end of section -->
-		
+
 	</main><!-- end of main -->
 
 <?php get_footer(); ?>

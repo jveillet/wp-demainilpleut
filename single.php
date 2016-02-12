@@ -1,23 +1,23 @@
 <?php get_header(); ?>
 
     <!-- main -->
-	<main role="main" class="dip-main">
+	<main role="main" class="main-container">
 
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<div class="blogPost-wrapper">
+		<div class="article-wrapper">
 
-      <h1 class="blogPost-title"><?php the_title(); ?></h1>
+      <h1 class="article-title"><?php the_title(); ?></h1>
 
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" class="blogPost">
-        <span class="blogPost-author">by&nbsp;<a class="blogPost-author--link" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
-        <span class="blogPost-pubDate">&mdash;&nbsp;<time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?> at <?php the_time('G:i'); ?></time></span>
-        <div class="blogPost-summary">
-          <span class="blogPost-readingTime"><?php echo dip_reading_time(get_the_content()); ?> read</span>
+			<article id="post-<?php the_ID(); ?>" class="article">
+        <span class="article-author">by&nbsp;<a class="article-author--link" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
+        <span class="article-pubdate">&mdash;&nbsp;<time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?> at <?php the_time('G:i'); ?></time></span>
+        <div class="article-summary">
+          <span class="article-readingTime"><?php echo dip_reading_time(get_the_content()); ?> read</span>
         </div>
-        <div class="blogPost-content"><?php the_content(); ?></div>
-        <span class="blogPost-categories">Published in <?php the_category(', '); ?></span>
+        <div class="article-content"><?php the_content(); ?></div>
+        <span class="article-categories">Published in <?php the_category(', '); ?></span>
 			</article><!-- end of article -->
 
       <div class="about about-box">
@@ -41,7 +41,7 @@
 
 	<?php endif; ?>
 
-		</div><!-- end of blogPost-wrapper -->
+		</div><!-- end of article-wrapper -->
 	</main><!-- end of main -->
 
 <?php get_footer(); ?>

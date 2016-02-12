@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <!-- main -->
-  <main role="main" class="dip-main">
+  <main role="main" class="main-container">
     <!-- section -->
     <section>
       <h1>Categories for <?php single_cat_title(); ?></h1>

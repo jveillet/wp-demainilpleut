@@ -1,13 +1,12 @@
 <?php get_header(); ?>
-
     <!-- main -->
-	<main role="main" class="dip-main">
+	<main role="main" class="main-container">
 
-	
+
 		<!-- section -->
 		<section>
 
-		    <?php //get_template_part('searchform'); ?>
+		  <?php //get_template_part('searchform'); ?>
 
 			<?php get_template_part('loop'); ?>
 

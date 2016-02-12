@@ -1,5 +1,5 @@
 			<!-- footer -->
-        <div class="footer footer--lightgreen">
+        <div class="footer bg-green--lightgreen">
 	        <div class="grid-container">
 	          <div class="row clearfix">
               <div class="column third">
@@ -35,7 +35,7 @@
     $(document).ready(function() {
       $('body').addClass('js');
       var $menu = $('#js-menu'),
-      $menulink = $('.topBar-menuBtn');
+      $menulink = $('.topbar-menu-btn');
 
       $menulink.click(function() {
         $menulink.toggleClass('active');
