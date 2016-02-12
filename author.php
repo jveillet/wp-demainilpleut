@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <!-- main -->
-	<main role="main" class="dip-main">
+	<main role="main" class="main-container">
 		<!-- section -->
 		<section class="author">
 
@@ -16,9 +16,9 @@
 			<?php echo wpautop( get_the_author_meta('description') ); ?>
 
 		<?php endif; ?>
-    
+
     <h2>Articles</h2>
-    
+
     <?php echo '<div class=""><ol>'; ?>
 
 		<?php rewind_posts(); while (have_posts()) : the_post(); ?>
@@ -26,7 +26,7 @@
      <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ? class="blog-link"><?php the_title(); ?></a></li>
 
 		<?php endwhile; ?>
-    
+
     <?php echo '</ol></div>'; ?>
 
 		<?php else: ?>
@@ -43,7 +43,7 @@
 			<?php get_template_part('pagination'); ?>
 
 		</section><!-- end of section -->
-		
+
 	</main>
 
 <?php get_footer(); ?>

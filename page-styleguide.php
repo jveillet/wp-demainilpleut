@@ -4,7 +4,7 @@ Template Name: Styleguide
 */
 get_header(); ?>
 
-<main id="content" role="main" class="dip-main">
+<main id="content" role="main" class="main-container">
 
   <?php the_post(); ?>
 
@@ -82,18 +82,18 @@ get_header(); ?>
     <div class="pattern">
       <h1 class="pattern-title">TopBar</h1>
       <div class="pattern-item">
-       <div id="topBar" class="topBar topBar--purple">
-        <div class="topBar-logo">
-         <a href="<?php echo home_url(); ?>" class="topBar-logo-url">demainilpleut.fr</a>
+       <div  class="topbar bg-purple--dark">
+        <div class="topbar-logo">
+         <a href="<?php echo home_url(); ?>" class="topbar-logo-url">Foo bar</a>
         </div><!-- end of topBar logo -->
-       <div class="topBar-menu">
-        <button class="topBar-menuBtn topBar-menuBtn--small">Menu</button>
-        <nav id="js-menu" role="navigation" class="topBar-navigation">
+       <div class="topbar-menu">
+        <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
+        <nav id="js-menu" role="navigation" class="topbar-navigation">
           <ul>
-            <li><a href="#" class="topBar-navigation-item">Link 1</a></li>
-            <li><a href="#" class="topBar-navigation-item">Link 2</a></li>
-            <li><a href="#" class="topBar-navigation-item">Link 3</a></li>
-            <li><a href="#" class="topBar-navigation-item">Link 4</a></li>
+            <li><a href="#" class="topbar-navigation-item">Link 1</a></li>
+            <li><a href="#" class="topbar-navigation-item">Link 2</a></li>
+            <li><a href="#" class="topbar-navigation-item">Link 3</a></li>
+            <li><a href="#" class="topbar-navigation-item">Link 4</a></li>
           </ul>
         </nav><!-- end of topBarNavigation -->
       </div><!-- end of topBarMenu -->
@@ -104,13 +104,13 @@ get_header(); ?>
 <div class="pattern">
   <h1 class="pattern-title">Blog post summary</h1>
   <div class="pattern-item">
-    <article id="post-1" class="blogPost">
-      <h2><a href="#" title="Lorem ipsum dolor sit amet." class="blogPost-title">Lorem ipsum dolor sit amet.</a></h2>
-      <span class="blogPost-author"><a class="blog-link" href="#">Jérémie Veillet</a></span>
-      <span class="blogPost-pubDate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-      <div class="blogPost-summary"></div>
+    <article id="post-1" class="article">
+      <h2><a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.</a></h2>
+      <span class="article-author"><a class="blog-link" href="#">John Appleseed</a></span>
+      <span class="article-pubdate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
+      <div class="article-summary"></div>
       <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu...</p>
-      <div><a class="blogPost-btn" href="#">Read more...</a></div>
+      <div><a class="article-btn" href="#">Read more...</a></div>
     </article><!-- end of article -->
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
@@ -118,17 +118,17 @@ get_header(); ?>
 <div class="pattern">
   <h1 class="pattern-title">Blog post</h1>
   <div class="pattern-item">
-    <h1 class="blogPost-title">Lorem ipsum dolor sit amet.</h1>
-    <article id="post-1"class="blogPost">
-      <span class="blogPost-author"><a class="blog-link" href="#">Jérémie Veillet</a></span>
-      <span class="blogPost-pubDate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-      <div class="blogPost-summary">
-        <span class="blogPost-readingTime">15 min read</span>
+    <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
+    <article id="post-1"class="article">
+      <span class="article-author"><a class="blog-link" href="#">John Appleseed</a></span>
+      <span class="article-pubdate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
+      <div class="article-summary">
+        <span class="article-readingTime">15 min read</span>
       </div>
       <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.</p>
       <p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
       <p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.</p>
-      <span class="blogPost-categories">Published in <a href="#" rel="tag">Uncategorized</a></span>
+      <span class="article-categories">Published in <a href="#" rel="tag">Uncategorized</a></span>
     </article><!-- end of article -->
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
@@ -170,7 +170,7 @@ get_header(); ?>
 <div class="pattern">
   <h1 class="pattern-title">Footer</h1>
   <div class="pattern-item">
-    <div class="footer footer--lightgreen">
+    <div class="footer bg-green--lightgreen">
       <div class="grid-container">
         <div class="row clearfix">
           <div class="column third">

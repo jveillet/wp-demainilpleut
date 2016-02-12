@@ -136,6 +136,14 @@ a, b, strong, dt {
   background-color: #c2bed1;
 }
 
+.bg-purple--dark {
+  background-color: #C2BED1;
+}
+
+.bg-green--lightgreen {
+  background-color: #edf5db;
+}
+
 /* Colors */
 
 .black {
@@ -155,24 +163,20 @@ a, b, strong, dt {
   width: 100%;
 }
 
-.dip-main {
+.main-container {
   padding-left: 1em;
   padding-right: 1em;
 }
 
 /* TopBar */
 
-.topBar {
+.topbar {
   position: relative;
   padding: .5em;
 }
 
-.topBar--purple {
-  background-color: #C2BED1;
-}
-
-.topBar-logo-url,
-.topBar-Logo-url:visited {
+.topbar-logo-url,
+.topbar-Logo-url:visited {
   color: #392D65;
   display: block;
   padding: .8em .5em;
@@ -181,12 +185,12 @@ a, b, strong, dt {
   font-weight: 600;
 }
 
-.topBar-logo-url:hover,
-.topBar-logo-url:focus {
+.topbar-logo-url:hover,
+.topbar-logo-url:focus {
   text-decoration: underline;
 }
 
-.topBar-logo {
+.topbar-logo {
   background: url(../img/logo2-small.png) no-repeat left center;
   background: url(../img/logo2.svg) no-repeat left center,
     linear-gradient(transparent, transparent);
@@ -197,7 +201,7 @@ a, b, strong, dt {
   z-index: 1;
 }
 
-.topBar-menuBtn {
+.topbar-menu-btn {
   float: right;
   vertical-align: middle;
   white-space: nowrap;
@@ -218,7 +222,7 @@ a, b, strong, dt {
   overflow: visible;
 }
 
-.topBar-menuBtn--small {
+.topbar-menu-btn--small {
   padding-right: .5em;
   padding-left: .5em;
   line-height: 2;
@@ -226,22 +230,22 @@ a, b, strong, dt {
   margin-top: .8em;
 }
 
-.topBar-menuBtn:hover,
+.topbar-menu-btn:hover,
 .button:focus {
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
-.topBar-menuBtn:active {
+.topbar-menu-btn:active {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5) inset;
 }
 
-.topBar-menuBtn::-moz-focus-inner {
+.topbar-menu-btn::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.topBar .topBar-navigation {
+.topbar .topbar-navigation {
   clear: both;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -250,22 +254,22 @@ a, b, strong, dt {
   transition: all 0.3s ease-out;
 }
 
-.js .topBar .topBar-navigation {
+.js .topbar .topbar-navigation {
   overflow: hidden;
   max-height: 0;
 }
 
-.topBar nav[role=navigation].active {
+.topbar nav[role=navigation].active {
   max-height: 15em;
 }
 
-.topBar .topBar-navigation ul {
+.topbar .topbar-navigation ul {
   margin: 0;
   padding: 0;
 }
 
-.topBar-navigation-item,
-.topBar-navigation-item:visited {
+.topbar-navigation-item,
+.topbar-navigation-item:visited {
   color: #ffffff;
   display: block;
   padding: .5em;
@@ -275,18 +279,18 @@ a, b, strong, dt {
 
 @media all and (min-width: 47em) {
 
-  .topBar {
+  .topbar {
     line-height: 1.5em;
     padding: .8em .5em;
     overflow: auto;
     width: 100%;
   }
 
-  .topBar .topBar-menu {
+  .topbar .topbar-menu {
     float: right;
   }
 
-  .topBar-logo {
+  .topbar-logo {
     background: url(../img/logo2.png) no-repeat left center;
     background: url(../img/logo2.svg) no-repeat left center,
       linear-gradient(transparent, transparent);
@@ -298,39 +302,39 @@ a, b, strong, dt {
     z-index: 1;
   }
 
-  .topBar-menuBtn {
+  .topbar-menu-btn {
     display: none;
   }
 
-  .js .topBar .topBar-navigation {
+  .js .topbar .topbar-navigation {
     max-height: none;
   }
 
-  .topBar .topBar-navigation ul {
+  .topbar .topbar-navigation ul {
     margin: 0 0 0 -.25em;
     border: 0;
   }
 
-  .topBar .topBar-navigation li {
+  .topbar .topbar-navigation li {
     display: inline-block;
     margin: 1em .25em;
   }
 
-  .topBar-navigation-item,
-  .topBar-navigation-item:visited {
+  .topbar-navigation-item,
+  .topbar-navigation-item:visited {
 	  border: 0;
 	  color: #392D65;
     text-decoration: none;
     font-weight: 600;
   }
 
-  .topBar-navigation-item:hover,
-  .topBar-navigation-item:focus {
+  .topbar-navigation-item:hover,
+  .topbar-navigation-item:focus {
     text-decoration: underline;
   }
 
-  .topBar-logo-url,
-  .topBar-Logo-url:visited {
+  .topbar-logo-url,
+  .topbar-Logo-url:visited {
     color: #392D65;
     display: block;
     padding: .8em .5em;
@@ -343,57 +347,57 @@ a, b, strong, dt {
 
 /* Blog */
 
-.blogPost {
+.article {
   margin-bottom: 2em;
 }
 
-.blogPost-title,
-.blogPost-title a:link,
-.blogPost-title a:visited {
+.article-title,
+.article-title a:link,
+.article-title a:visited {
   font-family: 'Gentium Book Basic', Palatino, Arial, serif;
   font-size: 1.8em;
   color: #0a0000;
+  line-height: 1;
   text-decoration: none;
 }
 
-.blogPost-summary {
+.article-summary {
   font-size: .9em;
   border-top: 1px solid #C2BED1;
   margin-top: .8em;
   padding-top: .5em;
 }
 
-.blogPost p a:link,
-.blogPost p a:visited {
+.article p a:link,
+.article p a:visited {
   color: #706694;
   text-decoration: underline;
-
 }
 
-.blogPost-pubDate {
+.article-pubdate {
   color: #938CAE;
   font-size: .8em;
   font-style: italic;
 }
 
-.blogPost-categories {
+.article-categories {
   display: inline-block;
   font-size: .8em;
   margin-top: .4em;
 }
 
-.blogPost-categories a,
-.blogPost-categories a:link,
-.blogPost-categories a:visited {
+.article-categories a,
+.article-categories a:link,
+.article-categories a:visited {
   color: #706694;
   text-decoration: none;
 }
 
-.blogPost-categories a:hover {
+.article-categories a:hover {
   text-decoration: underline;
 }
 
-.blogPost-readingTime {
+.article-readingTime {
   background: url(../img/icon-time-small.png) no-repeat left center;
   background: url(../img/icon-time.svg) no-repeat left center,
     linear-gradient(transparent, transparent);
@@ -404,14 +408,14 @@ a, b, strong, dt {
   padding: .5em 0 .5em 2em;
 }
 
-.blogPost-author--link,
-.blogPost-author--link:visited {
+.article-author--link,
+.article-author--link:visited {
   color: #706694;
   text-decoration: none;
   font-weight: 600;
 }
 
-.blogPost-author--link:hover{
+.article-author--link:hover{
   text-decoration: underline;
 }
 
@@ -426,7 +430,7 @@ a, b, strong, dt {
   text-decoration: underline;
 }
 
-.blogPost-btn {
+.article-btn {
   color:#ffffff;
   display: inline-block;
   vertical-align: middle;
@@ -447,42 +451,42 @@ a, b, strong, dt {
   overflow: visible;
 }
 
-.blogPost-btn,
-.blogPost-btn:hover,
-.blogPost-btn:active,
-.blogPost-btn:focus,
-.blogPost-btn:visited {
+.article-btn,
+.article-btn:hover,
+.article-btn:active,
+.article-btn:focus,
+.article-btn:visited {
   text-decoration:none;
   color:#ffffff;
 }
 
-.blogPost-btn:active {
+.article-btn:active {
   outline:none;
 }
 
-.blogPost-btn::-moz-focus-inner {
+.article-btn::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
 @media all and (min-width: 47em) {
-  .blogPost-wrapper {
+  .article-wrapper {
     margin: 0 auto;
     width: 500px;
     width: calc(60vw + 6em);
   }
 
-  h1.blogPost-title {
+  h1.article-title {
     font-size: 3.5em;
   }
 
-  .blogPost-content {
+  .article-content {
     font-size: 1.3em;
   }
 }
 
 @media all and (min-width: 67em) {
-  .blogPost-wrapper {
+  .article-wrapper {
     margin: 0 auto;
     width: 750px;
     width: calc(40vw + 6em);
@@ -728,7 +732,7 @@ code {
 
 /* Search */
 
-.searchForm-label--isVisible {
+.search-label--isvisible {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -737,18 +741,18 @@ code {
   width: 1px;
 }
 
-.searchForm {
+.search {
   position: relative;
 }
 
-.searchForm input {
+.search input {
   border: 1px solid #a37958;
   display: block;
   font-family: inherit;
   font-size: 100%;
 }
 
-.searchForm input[type=search] {
+.search input[type=search] {
   border-radius: 0;
   padding: .5em;
   padding-right: 2.5em;
@@ -758,7 +762,7 @@ code {
   -webkit-appearance: none;
 }
 
-.searchForm .searchForm-submit {
+.search .search-submit {
   background: transparent url(img/demainilpleut-search.png) no-repeat 50% 50%;
   border: none;
   bottom: .5em;
@@ -780,7 +784,7 @@ only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
 only screen and (                min-resolution: 192dpi) and (min-width: 320px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
 
-  .searchForm .searchForm-submit {
+  .search .search-submit {
     background: transparent url(img/demainilpleut-search@2x.png) no-repeat 50% 50%;
     background-size: 20px 20px;
     border: none;
@@ -798,21 +802,28 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 /* Text Field */
 
-.blogForm input,
-.blogForm textarea {
+.input {
   border: 1px solid #706666;
   display: block;
   font-family: inherit;
   font-size: 100%;
 }
 
-.blogForm .textField {
+.textarea {
+  border: 1px solid #706666;
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.textfield {
   border-radius: 0;
   padding: .5em;
   position: relative;
   top: 0;
   width: 100%;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 /* Grids */
@@ -892,10 +903,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 .footer {
   padding-top: 1rem;
-}
-
-.footer--lightgreen {
-  background-color: #edf5db;
 }
 
 .footer-disclaimer {

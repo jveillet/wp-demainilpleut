@@ -4,7 +4,7 @@ Template Name: Archives
 */
 get_header(); ?>
 
-<main id="content" role="main" class="dip-main">
+<main id="content" role="main" class="main-container">
 
   <?php //get_search_form(); ?>
 
@@ -41,7 +41,7 @@ get_header(); ?>
       <?php wp_list_authors('exclude_admin=0&optioncount=1'); ?>
     </ul>
   </div>
-			
+
   <h2>By Month</h2>
   <div class="archives">
     <p class="archives--small"><?php wp_get_archives('type=monthly&format=custom&after= |'); ?></p>
