@@ -81,7 +81,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Gentium Book Basic', Palatino, Arial, serif;
+  font-family: 'Raleway', Palatino, Arial, serif;
+  font-weight: 700;
 }
 
 audio,
@@ -355,8 +356,9 @@ a, b, strong, dt {
 .article-title,
 .article-title a:link,
 .article-title a:visited {
-  font-family: 'Gentium Book Basic', Palatino, Arial, serif;
+  font-family: 'Raleway', Palatino, Arial, serif;
   font-size: 1.8em;
+  font-weight: 700;
   color: #0a0000;
   line-height: 1;
   text-decoration: none;
