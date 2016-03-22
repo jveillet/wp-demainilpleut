@@ -348,7 +348,8 @@ a, b, strong, dt {
 /* Blog */
 
 .article {
-  margin-bottom: 2em;
+  margin-top: 3em;
+  margin-bottom: 6em;
 }
 
 .article-title,
@@ -428,6 +429,10 @@ a, b, strong, dt {
 .blog-link:hover,
 .blog-link:focus {
   text-decoration: underline;
+}
+
+.article-footer {
+  margin-top: 2em;
 }
 
 .article-btn {
