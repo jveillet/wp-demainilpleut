@@ -15,7 +15,7 @@
   <!-- wrapper -->
   <div class="wrapper">
 
-    <div class="topbar bg-purple--dark">
+    <div class="topbar bg-purple--light">
       <div class="topbar-logo">
        <a href="<?php echo home_url(); ?>" class="topbar-logo-url"><?php bloginfo('name'); ?></a>
      </div><!-- end of topBar logo -->

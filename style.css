@@ -132,12 +132,12 @@ a, b, strong, dt {
   background-color: #938CAE;
 }
 
-.bg-purple-ligth {
+.bg-purple--light {
   background-color: #c2bed1;
 }
 
 .bg-purple--dark {
-  background-color: #C2BED1;
+  background-color: #392d65;
 }
 
 .bg-green--lightgreen {
