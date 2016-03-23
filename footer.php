@@ -47,4 +47,4 @@
 	</body>
 </html>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,600italic,600,300" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,500,500italic,700,700italic,600italic,600' rel='stylesheet' type='text/css'>
