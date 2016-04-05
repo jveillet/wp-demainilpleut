@@ -373,7 +373,7 @@ a, b, strong, dt {
 
 .article p a:link,
 .article p a:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: underline;
 }
 
@@ -392,7 +392,7 @@ a, b, strong, dt {
 .article-categories a,
 .article-categories a:link,
 .article-categories a:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
 }
 
@@ -413,7 +413,7 @@ a, b, strong, dt {
 
 .article-author--link,
 .article-author--link:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
   font-weight: 600;
 }
@@ -424,7 +424,7 @@ a, b, strong, dt {
 
 .blog-link,
 .blog-link:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
 }
 
