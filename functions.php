@@ -228,6 +228,20 @@ function disable_emojis() {
   remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 }
 
+// custom admin login logo
+function wp_custom_login_logo() {
+  echo '<style type="text/css">
+  .login h1 a {
+    background: url('.get_bloginfo('template_directory').'/img/logo2.png) no-repeat left center !important;
+    background: url('.get_bloginfo('template_directory').'/img/logo2.svg) no-repeat left center,
+    linear-gradient(transparent, transparent) !important;
+    background-size: 160px 110px !important;
+    height: 110px !important;
+    width: 160px !important;
+  }
+  </style>';
+}
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -238,6 +252,7 @@ add_action('wp_enqueue_scripts', 'dip_styles'); // Add Theme Stylesheet
 add_action('init', 'register_dip_menu'); // Add HTML5 Blank Menu
 add_action('init', 'dip_wp_pagination'); // Add our HTML5 Pagination
 add_action( 'init', 'disable_emojis' ); // Disable emojis
+add_action('login_head', 'wp_custom_login_logo'); // Add a custom logo on the login page
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -273,5 +288,5 @@ add_filter('excerpt_more', 'dip_view_article'); // Add 'View Article' button ins
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
-	
+
 ?>
