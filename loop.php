@@ -6,7 +6,7 @@
     <span class="article-author"><a class="article-author--link" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
     <span class="article-pubdate">&mdash;&nbsp;<time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?> at <?php the_time('G:i'); ?></time></span>
     <div class="article-summary"></div>
-    <?php dip_wp_excerpt('dip_wp_index'); // Build your custom callback length in functions.php ?>
+    <?php the_excerpt(); ?>
   </article><!-- end of article -->
 
 <?php endwhile; ?>
