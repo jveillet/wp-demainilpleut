@@ -128,38 +128,83 @@ function dip_wp_pagination() {
     echo $paginate;
 }
 
-// Custom Excerpts
-function dip_wp_index($length) {
-	// Create 150 Word Callback for Index page Excerpts, call using dip_wp_excerpt('dip_wp_index');
-  return 150;
+/**
+*
+*/
+function wpse_allowedtags() {
+    // Add custom tags to this string
+  return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>';
 }
 
-// Create 40 Word Callback for Custom Post Excerpts, call using dip_wp_excerpt('dip_wp_custom_post');
-function dip_wp_custom_post($length) {
-  return 40;
-}
+if ( ! function_exists( 'dip_custom_wp_trim_excerpt' ) ) :
 
-// Create the Custom Excerpts callback
-function dip_wp_excerpt($length_callback = '', $more_callback = '') {
-    global $post;
-    if (function_exists($length_callback)) {
-        add_filter('excerpt_length', $length_callback);
+  function dip_custom_wp_trim_excerpt($wpse_excerpt) {
+    $raw_excerpt = $wpse_excerpt;
+    if ( '' == $wpse_excerpt ) {
+
+      $wpse_excerpt = get_the_content('');
+      $wpse_excerpt = strip_shortcodes( $wpse_excerpt );
+      $wpse_excerpt = apply_filters('the_content', $wpse_excerpt);
+      $wpse_excerpt = str_replace(']]>', ']]&gt;', $wpse_excerpt);
+      $wpse_excerpt = strip_tags($wpse_excerpt, wpse_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
+
+      //Set the excerpt word count and only break after sentence is complete.
+      $excerpt_word_count = 75;
+      $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+      $tokens = array();
+      $excerptOutput = '';
+      $count = 0;
+
+      // Divide the string into tokens; HTML tags, or words, followed by any whitespace
+      preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $wpse_excerpt, $tokens);
+
+      foreach ($tokens[0] as $token) {
+
+        if ($count >= $excerpt_length && preg_match('/[\,\;\?\.\!]\s*$/uS', $token)) {
+          // Limit reached, continue until , ; ? . or ! occur at the end
+          $excerptOutput .= trim($token);
+          break;
+        }
+
+        // Add words to complete sentence
+        $count++;
+
+        // Append what's left of the token
+        $excerptOutput .= $token;
+      }
+
+      $wpse_excerpt = trim(force_balance_tags($excerptOutput));
+
+      $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more about: %s &nbsp;&raquo;', 'wpse' ), get_the_title()) . '</a>';
+      $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+
+      // After the content
+      $wpse_excerpt .= $excerpt_more; /*Add read more in new paragraph */
+
+      return $wpse_excerpt;
+
     }
-    if (function_exists($more_callback)) {
-        add_filter('excerpt_more', $more_callback);
-    }
-    $output = get_the_excerpt();
-    $output = apply_filters('wptexturize', $output);
-    $output = apply_filters('convert_chars', $output);
-    $output = '<p>' . $output . '</p>';
-    echo $output;
-}
+    return apply_filters('dip_custom_wp_trim_excerpt', $wpse_excerpt, $raw_excerpt);
+  }
 
-// Custom View Article link to Post
-function dip_view_article($more) {
-    global $post;
-    return '...<div class="article-footer"><a class="article-btn" href="' . get_permalink($post->ID) . '">' . __('Read more...', 'demainilpleut') . '</a></div>';
+  endif;
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'dip_custom_wp_trim_excerpt');
+
+/**
+*
+*/
+function dip_excerpt_more( $more ) {
+  return '<div class="article-footer"><a class="article-btn" href="' . get_permalink( get_the_ID() ) . '">' . __('Read more...', 'demainilpleut') . '</a></div>';
 }
+add_filter( 'excerpt_more', 'dip_excerpt_more' );
+
+function dip_excerpt_length( $length ) {
+    return 300;
+}
+add_filter( 'excerpt_length', 'dip_excerpt_length', 999 );
+
 
 // Remove Admin bar
 function remove_admin_bar() {
@@ -299,19 +344,10 @@ add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (S
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
-// add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes (Commented out by default)
-// add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID (Commented out by default)
-// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> Page ID's (Commented out by default)
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
-add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
-add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'dip_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
-add_filter('excerpt_more', 'dip_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-
-// Remove Filters
-remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 ?>
