@@ -17,25 +17,28 @@ get_header(); ?>
       <div class="pattern-item">
         <ul class="colors">
           <li class="color" style="background: #0a0000;">
-            <div class="color-text">#0a0000</div>
+            <div class="color-text white">#0a0000</div>
           </li>
-          <li class="color" style="background: #392D65;">
-            <div class="color-text">#392D65</div>
+          <li class="color" style="background: #392d65;">
+            <div class="color-text white">#392d65</div>
           </li>
           <li class="color" style="background: #706694;">
-            <div class="color-text">#706694</div>
+            <div class="color-text white">#706694</div>
           </li>
-          <li class="color" style="background: #938CAE;">
-            <div class="color-text">#938CAE</div>
+          <li class="color" style="background: #938cae;">
+            <div class="color-text white">#938cae</div>
           </li>
-          <li class="color" style="background: #C2BED1;">
-            <div class="color-text">#C2BED1</div>
+          <li class="color" style="background: #c2bed1;">
+            <div class="color-text">#c2bed1</div>
           </li>
-          <li class="color" style="background: #8CA755;">
-            <div class="color-text">#8CA755</div>
+          <li class="color" style="background: #8ca755;">
+            <div class="color-text">#8ca755</div>
           </li>
-          <li class="color" style="background: #EDF5DB;">
-            <div class="color-text color-text-inverted">#EDF5DB</div>
+          <li class="color" style="background: #edf5db;">
+            <div class="color-text">#edf5db</div>
+          </li>
+          <li class="color bg-magenta">
+            <div class="color-text white">#ec4882</div>
           </li>
         </ul>
       </div>
@@ -80,26 +83,38 @@ get_header(); ?>
     </div><!-- end of pattern item -->
 
     <div class="pattern">
+      <h1 class="pattern-title">Tables of content</h1>
+      <div class="pattern-item">
+        <ul class="list-unordered">
+          <li><a class="blog-link" href="#">Link 1</a></li>
+          <li><a class="blog-link" href="#">Link 2</a></li>
+          <li><a class="blog-link" href="#">Link 3</a></li>
+          <li><a class="blog-link" href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </div><!-- end of pattern item -->
+
+    <div class="pattern">
       <h1 class="pattern-title">TopBar</h1>
       <div class="pattern-item">
-       <div  class="topbar bg-purple--dark">
-        <div class="topbar-logo">
-         <a href="<?php echo home_url(); ?>" class="topbar-logo-url">Foo bar</a>
-        </div><!-- end of topBar logo -->
-       <div class="topbar-menu">
-        <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
-        <nav id="js-menu" role="navigation" class="topbar-navigation">
-          <ul>
-            <li><a href="#" class="topbar-navigation-item">Link 1</a></li>
-            <li><a href="#" class="topbar-navigation-item">Link 2</a></li>
-            <li><a href="#" class="topbar-navigation-item">Link 3</a></li>
-            <li><a href="#" class="topbar-navigation-item">Link 4</a></li>
-          </ul>
-        </nav><!-- end of topBarNavigation -->
-      </div><!-- end of topBarMenu -->
-    </div><!-- end of topBar -->
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
+        <div  class="topbar bg-purple--light">
+          <div class="topbar-logo">
+            <a href="<?php echo home_url(); ?>" class="topbar-logo-url">Foo bar</a>
+          </div><!-- end of topBar logo -->
+        <div class="topbar-menu">
+          <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
+            <nav id="js-menu" role="navigation" class="topbar-navigation">
+              <ul>
+                <li><a href="#" class="topbar-navigation-item">Link 1</a></li>
+                <li><a href="#" class="topbar-navigation-item">Link 2</a></li>
+                <li><a href="#" class="topbar-navigation-item">Link 3</a></li>
+                <li><a href="#" class="topbar-navigation-item">Link 4</a></li>
+              </ul>
+            </nav><!-- end of topBarNavigation -->
+          </div><!-- end of topBarMenu -->
+        </div><!-- end of topBar -->
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
 <div class="pattern">
   <h1 class="pattern-title">Blog post summary</h1>
@@ -145,6 +160,15 @@ get_header(); ?>
           <p><span class="about-author-name"><a href="#">Reno Raines</a></span><br><small>He was a cop, and good at his job. But he committed the ultimate sin—and testified against other cops gone bad. Cops that tried to kill him, but got the woman he loved instead. Framed for murder, now he prowls the badlands...an outlaw hunting outlaws...a bounty hunter...a RENEGADE, demain il pleut's administrator.</small></p>
         </div><!-- end of author bio -->
       </div><!-- end of about author -->
+    </div><!-- end of about section -->
+  </div><!-- end of pattern item -->
+</div><!-- end of pattern -->
+
+<div class="pattern">
+  <h1 class="pattern-title">Images</h1>
+  <div class="pattern-item">
+    <div class="resp-images">
+      <img src="http://placehold.it/1920x600/ec4882/ffffff?text=Placeholder%20image" alt="placeholder" class="aligncenter size-full wp-image-34" style="width: 100%;"/>
     </div><!-- end of about section -->
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
@@ -219,6 +243,50 @@ get_header(); ?>
         var foo = "bar", baz = 5;
       </code>
     </pre>
+  </div><!-- end of pattern item -->
+</div><!-- end of pattern -->
+
+<div class="pattern">
+  <h1 class="pattern-title">Alerts</h1>
+  <div class="pattern-item">
+    <h2>Info</h2>
+    <div class="alert alert--info">
+      <strong>Hello there!</strong> I'm a simple info panel.
+    </div>
+  </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <h2>Warning</h2>
+    <div class="alert alert--warning">
+      <strong>Be careful!!</strong> This advice needs your attention.
+    </div>
+  </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <h2>Danger</h2>
+    <div class="alert alert--danger">
+      <strong>Stop righ there!!!</strong> If you don't look this you're probably unleashing some kind of kraken.
+    </div>
+  </div><!-- end of pattern item -->
+</div><!-- end of pattern -->
+
+<div class="pattern">
+  <h1 class="pattern-title">Buttons</h1>
+  <div class="pattern-item">
+    <h2>Normal</h2>
+    <div class="inline">
+      <button class="btn bg-purple--light black" name="Normal button" type="button">Button</button>
+      <button class="btn bg-purple--dark white" name="Normal button" type="button">Button</button>
+      <button class="btn bg-green white" name="Normal button" type="button">Button</button>
+      <button class="btn bg-magenta white" name="Normal button" type="button">Button</button>
+    </div>
+  </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <h2>Small</h2>
+    <div class="inline">
+      <button class="btn btn--small bg-purple--light black" name="Small button" type="button">Button</button>
+      <button class="btn btn--small bg-purple--dark white" name="Small button" type="button">Button</button>
+      <button class="btn btn--small bg-green white" name="Small button" type="button">Button</button>
+      <button class="btn btn--small bg-magenta white" name="Small button" type="button">Button</button>
+    </div>
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
