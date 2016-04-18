@@ -133,7 +133,7 @@ function dip_wp_pagination() {
 */
 function wpse_allowedtags() {
     // Add custom tags to this string
-  return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>';
+  return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<p>,<img>,<video>,<audio>,<pre>,<code>,<strong>,<i>,<b>,<span>,<div>,<h2>,<h3>,<h4>,<h5>,<h6>';
 }
 
 if ( ! function_exists( 'dip_custom_wp_trim_excerpt' ) ) :
