@@ -3,11 +3,11 @@
     <!-- main -->
 	<main role="main" class="main-container">
 		<!-- section -->
-		<section class="author">
+		<section class="page-author">
 
 		<?php if (have_posts()): the_post(); ?>
 
-			<h1 class="black">About author <?php echo get_the_author(); ?></h1>
+			<h1>About author <?php echo get_the_author(); ?></h1>
 
 		<?php if ( get_the_author_meta('description')) : ?>
 

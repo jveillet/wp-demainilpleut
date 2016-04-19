@@ -581,14 +581,14 @@ code {
 
 /* Author */
 
-.author a:link,
-.author a:visited {
-  color: #706694;
+.page-author a:link,
+.page-author a:visited {
+  color: #ec4882;
   text-decoration: none;
 }
 
-.author a:hover,
-.author a:focus {
+.page-author a:hover,
+.page-author a:focus {
   text-decoration: underline;
 }
 
@@ -631,7 +631,7 @@ code {
 
 .about-author-name a,
 .about-author-name a:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
 }
 
@@ -666,7 +666,7 @@ code {
 
 .about-author-bio a:link,
 .about-author-bio a:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
 }
 
