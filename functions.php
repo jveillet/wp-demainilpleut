@@ -196,7 +196,7 @@ add_filter('get_the_excerpt', 'dip_custom_wp_trim_excerpt');
 *
 */
 function dip_excerpt_more( $more ) {
-  return '<div class="article-footer"><a class="article-btn" href="' . get_permalink( get_the_ID() ) . '">' . __('Read more...', 'demainilpleut') . '</a></div>';
+  return '<div class="article-footer"><a class="btn bg-magenta white" href="' . get_permalink( get_the_ID() ) . '">' . __('Read more...', 'demainilpleut') . '</a></div>';
 }
 add_filter( 'excerpt_more', 'dip_excerpt_more' );
 

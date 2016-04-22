@@ -287,11 +287,12 @@ a, b, strong, dt {
 
 .topbar-navigation-item,
 .topbar-navigation-item:visited {
-  color: #ffffff;
+  color: #392d65;
   display: block;
   padding: .5em;
   text-decoration: none;
-  font-weight: 300;
+  text-align: center;
+  font-weight: 600;
 }
 
 @media all and (min-width: 47em) {
@@ -340,7 +341,7 @@ a, b, strong, dt {
   .topbar-navigation-item,
   .topbar-navigation-item:visited {
 	  border: 0;
-	  color: #392D65;
+	  color: #392d65;
     text-decoration: none;
     font-weight: 600;
   }
@@ -352,7 +353,7 @@ a, b, strong, dt {
 
   .topbar-logo-url,
   .topbar-Logo-url:visited {
-    color: #392D65;
+    color: #392d65;
     display: block;
     padding: .8em .5em;
     text-decoration: none;
@@ -414,7 +415,8 @@ a, b, strong, dt {
 .article-categories {
   display: inline-block;
   font-size: .8em;
-  margin-top: .4em;
+  margin-top: .5em;
+  width: 100%
 }
 
 .article-categories a,
@@ -465,45 +467,6 @@ a, b, strong, dt {
   margin-top: 2em;
 }
 
-.article-btn {
-  color:#ffffff;
-  display: inline-block;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-family: inherit;
-  font-size: 100%;
-  cursor: pointer;
-  border: none;
-  margin: 0;
-  padding-top: 0;
-  padding-bottom:0;
-  line-height: 3;
-  height: 3em;
-  padding-right: 1em;
-  padding-left: 1em;
-  background-color: #EC4882;
-  border-radius: 4px;
-  overflow: visible;
-}
-
-.article-btn,
-.article-btn:hover,
-.article-btn:active,
-.article-btn:focus,
-.article-btn:visited {
-  text-decoration: none;
-  color:#ffffff;
-}
-
-.article-btn:active {
-  outline: none;
-}
-
-.article-btn::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
 @media all and (min-width: 47em) {
   .article-wrapper {
     margin: 0 auto;
@@ -518,6 +481,10 @@ a, b, strong, dt {
   .article-content {
     font-size: 1.3em;
   }
+  .article-categories {
+    float: left;
+    width: 80%;
+  }
 }
 
 @media all and (min-width: 67em) {
@@ -525,6 +492,50 @@ a, b, strong, dt {
     margin: 0 auto;
     width: 750px;
     width: calc(40vw + 6em);
+  }
+}
+
+.article-top {
+  display: block;
+  margin-top: 1.5em;
+  text-align: center;
+  width: 100%;
+  /*display: inline-block;*/
+  font-size: .8em;
+}
+
+.top {
+  color: #ec4882;
+  color: rgba(236, 72, 130, .5);
+  -webkit-transition: color 500ms, -webkit-transform 500ms;
+  -moz-transition: color 500ms, -moz-transform 500ms;
+  -o-transition: color 500ms, -o-transform 500ms;
+  transition: color 500ms, transform 500ms;
+}
+
+.top:hover,
+.top:active,
+.top:focus {
+  color: #ec4882;
+  color: rgba(236, 72, 130, 1);
+}
+
+@media all and (min-width: 47em) {
+  .article-top {
+    width: 20%;
+    display: inline-block;
+    font-size: .8em;
+    margin-top: .5em;
+  }
+
+  .top {
+    color: #ec4882;
+    color: rgba(236, 72, 130, .5);
+    float: right;
+    -webkit-transition: color 500ms, -webkit-transform 500ms;
+    -moz-transition: color 500ms, -moz-transform 500ms;
+    -o-transition: color 500ms, -o-transform 500ms;
+    transition: color 500ms, transform 500ms;
   }
 }
 
@@ -728,12 +739,12 @@ code {
 .page-numbers a,
 .page-numbers a:link,
 .page-numbers a:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
 }
 
 .page-numbers a:hover {
-  color: #938cae;
+  color: #ec4882;
   text-decoration: underline;
 }
 
@@ -751,7 +762,7 @@ code {
 }
 
 .page-numbers .current {
-  color: #C2BED1;
+  color: #c2bed1;
   background: none;
 }
 
@@ -795,6 +806,7 @@ code {
   top: 0;
   width: 100%;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .search .search-submit {
@@ -856,7 +868,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   padding: .5em;
   position: relative;
   top: 0;
-  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -981,12 +992,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   cursor: pointer;
   border: none;
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
   line-height: 3;
   height: 3em;
-  padding-right: 1em;
-  padding-left: 1em;
+  padding: 0 1em 0 1em;
   border-radius: 4px;
   overflow: visible;
   font-weight: 600;
@@ -1000,7 +1008,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   text-decoration: none;
 }
 
-.btn:active {
+.btn:active,
+.btn:focus {
   outline: none;
 }
 

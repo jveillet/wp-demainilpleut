@@ -125,7 +125,7 @@ get_header(); ?>
       <span class="article-pubdate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
       <div class="article-summary"></div>
       <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu...</p>
-      <div><a class="article-btn" href="#">Read more...</a></div>
+      <div><a class="btn bg-magenta white" href="#">Read more...</a></div>
     </article><!-- end of article -->
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
@@ -157,7 +157,7 @@ get_header(); ?>
       <div class="about-author">
         <div class="about-author-bio">
           <a class="about-author-avatar" href="#"><img src="https://demainilpleut.fr/wp-content/uploads/2015/12/capitan.jpg" width="80" height="80" alt="author"></a>
-          <p><span class="about-author-name"><a href="#">Reno Raines</a></span><br><small>He was a cop, and good at his job. But he committed the ultimate sin—and testified against other cops gone bad. Cops that tried to kill him, but got the woman he loved instead. Framed for murder, now he prowls the badlands...an outlaw hunting outlaws...a bounty hunter...a RENEGADE, demain il pleut's administrator.</small></p>
+          <p><span class="about-author-name"><a href="#">Reno Raines</a></span><br><small>He was a cop, and good at his job. But he committed the ultimate sin—and testified against other cops gone bad. Cops that tried to kill him, but got the woman he loved instead. Framed for murder, now he prowls the badlands...an outlaw hunting outlaws...a bounty hunter...a RENEGADE.</small></p>
         </div><!-- end of author bio -->
       </div><!-- end of about author -->
     </div><!-- end of about section -->
@@ -249,21 +249,23 @@ get_header(); ?>
 <div class="pattern">
   <h1 class="pattern-title">Alerts</h1>
   <div class="pattern-item">
-    <h2>Info</h2>
-    <div class="alert alert--info">
-      <strong>Hello there!</strong> I'm a simple info panel.
+    <div>
+      <h2>Info</h2>
+      <div class="alert alert--info">
+        <strong>Hello there!</strong> I'm a simple info panel.
+      </div>
     </div>
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <h2>Warning</h2>
-    <div class="alert alert--warning">
-      <strong>Be careful!!</strong> This advice needs your attention.
+    <div>
+      <h2>Warning</h2>
+      <div class="alert alert--warning">
+        <strong>Be careful!!</strong> This advice needs your attention.
+      </div>
     </div>
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <h2>Danger</h2>
-    <div class="alert alert--danger">
-      <strong>Stop righ there!!!</strong> If you don't look this you're probably unleashing some kind of kraken.
+    <div>
+      <h2>Danger</h2>
+      <div class="alert alert--danger">
+        <strong>Stop righ there!!!</strong> If you don't look this you're probably unleashing some kind of kraken.
+      </div>
     </div>
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
