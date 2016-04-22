@@ -13,7 +13,7 @@
 <body <?php body_class(); ?>>
 
   <!-- wrapper -->
-  <div class="wrapper">
+  <div id="top" class="wrapper">
 
     <div class="topbar bg-purple--light">
       <div class="topbar-logo">

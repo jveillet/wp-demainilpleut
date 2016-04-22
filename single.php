@@ -17,7 +17,7 @@
           <span class="article-readingTime"><?php echo dip_reading_time(get_the_content()); ?> read</span>
         </div>
         <div class="article-content"><?php the_content(); ?></div>
-        <span class="article-categories">Published in <?php the_category(', '); ?></span>
+        <span class="article-categories">Published in <?php the_category(', '); ?></span><span class="article-top"><a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a></span>
 			</article><!-- end of article -->
 
       <div class="about about-box">
