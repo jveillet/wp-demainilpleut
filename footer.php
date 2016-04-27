@@ -29,20 +29,23 @@
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs"></script>
+    <script src="<?php echo get_template_directory_uri();?>/js/bliss.min.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/js/prism.min.js"></script>
     <script>
-    $(document).ready(function() {
-      $('body').addClass('js');
-      var $menu = $('#js-menu'),
-      $menulink = $('.topbar-menu-btn');
-
-      $menulink.click(function() {
-        $menulink.toggleClass('active');
-        $menu.toggleClass('active');
-        return false;
+      // Add/display the mobile menu button, and
+      $.ready().then(function(){
+        $("body").classList.add("js");
+        var menu = $("#js-menu");
+        var menulink = $(".topbar-menu-btn");
+        // Toggle the display of menu links
+        menulink
+        .addEventListener("click", function(event) {
+          menulink.classList.toggle("active");
+          menu.classList.toggle('active');
+          return false;
+        });
       });
-    });
     </script>
 	</body>
 </html>
