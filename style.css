@@ -227,12 +227,9 @@ a, b, strong, dt {
   cursor: pointer;
   border: none;
   margin: 0;
-  padding-top: 0;
-  padding-bottom:0;
+  padding: 0 1em 0 1em;
   line-height: 3;
   height: 3em;
-  padding-right: 1em;
-  padding-left: 1em;
   background-color: #ffffff;
   color: #706694;
   border-radius: 4px;
@@ -500,16 +497,12 @@ a, b, strong, dt {
   margin-top: 1.5em;
   text-align: center;
   width: 100%;
-  /*display: inline-block;*/
   font-size: .8em;
 }
 
 .top {
   color: #ec4882;
   color: rgba(236, 72, 130, .5);
-  -webkit-transition: color 500ms, -webkit-transform 500ms;
-  -moz-transition: color 500ms, -moz-transform 500ms;
-  -o-transition: color 500ms, -o-transform 500ms;
   transition: color 500ms, transform 500ms;
 }
 
@@ -532,9 +525,6 @@ a, b, strong, dt {
     color: #ec4882;
     color: rgba(236, 72, 130, .5);
     float: right;
-    -webkit-transition: color 500ms, -webkit-transform 500ms;
-    -moz-transition: color 500ms, -moz-transform 500ms;
-    -o-transition: color 500ms, -o-transform 500ms;
     transition: color 500ms, transform 500ms;
   }
 }
@@ -673,8 +663,6 @@ code {
     display: block;
     float: left;
     margin: 4px 12px 12px 0;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
     border-radius: 100%;
     shape-outside: circle(30%);
     shape-margin: 1em;
